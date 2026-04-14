@@ -1,8 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { SectionHeading } from "@/components/SectionHeading";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { CTAButton } from "@/components/CTAButton";
+import { motion } from "framer-motion";
 
 export default function TestimonialsPage() {
   const testimonials = [
@@ -55,21 +55,35 @@ export default function TestimonialsPage() {
       <Navigation />
       
       <main className="flex-grow pt-32">
-        <section className="py-16 md:py-24 bg-white">
-          <div className="container mx-auto px-6 text-center max-w-4xl">
-            <SectionHeading 
-              title="A Record of Excellence" 
-              subtitle="Client Stories" 
-            />
-            <p className="text-xl text-foreground/80 leading-relaxed font-light">
-              The true measure of an advisor's capability is the results delivered and the trust maintained with their clients.
-            </p>
+        {/* Editorial Opener */}
+        <section className="py-24 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[#ebe8e2] -skew-y-2 origin-top-left -z-10 scale-110"></div>
+          
+          <div className="container mx-auto px-6 text-center max-w-5xl relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-8 flex items-center justify-center">
+                <span className="w-8 h-[1px] bg-primary mr-4"></span>
+                Client Stories
+                <span className="w-8 h-[1px] bg-primary ml-4"></span>
+              </p>
+              <h1 className="font-serif text-5xl md:text-7xl font-light tracking-tight mb-8">
+                A Record of Excellence.
+              </h1>
+              <p className="text-xl text-foreground/80 leading-relaxed font-light max-w-2xl mx-auto">
+                The true measure of an advisor's capability is the results delivered and the trust maintained with their clients.
+              </p>
+            </motion.div>
           </div>
         </section>
 
-        <section className="py-12 bg-accent/20 pb-32">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="columns-1 md:columns-2 gap-8 space-y-8">
+        <section className="py-24 pb-40">
+          <div className="container mx-auto px-6 max-w-7xl">
+            {/* Masonry-style Layout */}
+            <div className="columns-1 md:columns-2 gap-12 space-y-12">
               {testimonials.map((t, i) => (
                 <div key={i} className="break-inside-avoid">
                   <TestimonialCard {...t} />
@@ -77,8 +91,8 @@ export default function TestimonialsPage() {
               ))}
             </div>
             
-            <div className="mt-24 text-center">
-              <h3 className="font-serif text-2xl mb-6">Ready to write your success story?</h3>
+            <div className="mt-32 text-center border-t border-border pt-24">
+              <h3 className="font-serif text-4xl mb-8 font-light tracking-tight">Ready to write your success story?</h3>
               <CTAButton href="/contact">Book a Consultation</CTAButton>
             </div>
           </div>

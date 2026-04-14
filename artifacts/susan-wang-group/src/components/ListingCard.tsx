@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Bed, Bath, Square, MapPin } from "lucide-react";
 import { Link } from "wouter";
 
 interface ListingCardProps {
@@ -19,42 +18,43 @@ export function ListingCard({ image, price, address, city, beds, baths, sqft, st
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5 }}
-      className="group cursor-pointer group"
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      className="group cursor-pointer flex flex-col h-full"
     >
-      <div className="relative aspect-[4/3] overflow-hidden mb-4">
-        <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-medium tracking-wider uppercase">
+      <div className="relative aspect-[4/5] overflow-hidden mb-6">
+        <div className="absolute top-4 left-4 z-10 border border-white/50 text-white bg-black/10 backdrop-blur-md px-4 py-1.5 text-[10px] tracking-[0.2em] uppercase">
           {status}
         </div>
         <img 
           src={image} 
           alt={address} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute bottom-0 left-0 w-full h-[3px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20"></div>
       </div>
       
-      <div className="space-y-2">
-        <p className="text-xl font-serif text-foreground">{price}</p>
-        <div className="flex flex-col">
-          <span className="text-foreground/90 font-medium">{address}</span>
-          <span className="text-foreground/60 text-sm flex items-center mt-1">
-            <MapPin size={14} className="mr-1 opacity-70" />
-            {city}
-          </span>
+      <div className="space-y-3 flex-grow flex flex-col justify-between">
+        <div>
+          <p className="text-3xl font-serif text-foreground font-light tracking-tight">{price}</p>
+          <div className="flex flex-col mt-2">
+            <span className="text-foreground/80 font-light text-lg">{address}</span>
+            <span className="text-foreground/50 text-xs tracking-wider uppercase mt-1">
+              {city}
+            </span>
+          </div>
         </div>
         
-        <div className="flex items-center space-x-4 pt-3 mt-3 border-t border-border text-sm text-foreground/70">
+        <div className="flex items-center pt-4 mt-4 border-t border-border text-xs tracking-wider uppercase text-foreground/60">
           <div className="flex items-center">
-            <Bed size={16} className="mr-1.5 opacity-60" />
-            <span>{beds} Beds</span>
+            <span>{beds} Bed</span>
           </div>
+          <div className="w-[1px] h-3 bg-border mx-3"></div>
           <div className="flex items-center">
-            <Bath size={16} className="mr-1.5 opacity-60" />
-            <span>{baths} Baths</span>
+            <span>{baths} Bath</span>
           </div>
+          <div className="w-[1px] h-3 bg-border mx-3"></div>
           <div className="flex items-center">
-            <Square size={16} className="mr-1.5 opacity-60" />
             <span>{sqft} Sq.Ft.</span>
           </div>
         </div>

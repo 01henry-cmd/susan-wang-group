@@ -1,0 +1,177 @@
+Take the current site and elevate it significantly. The foundation is there, but it still needs to feel like a premium custom real estate website built by a high-end agency, not a strong template.
+
+Push the design quality much further in these areas:
+
+OVERALL GOAL
+Make this website feel like a $15k–$30k custom-designed real estate brand site for a top Orange County / Los Angeles agent. It should feel editorial, luxurious, modern, refined, and highly intentional.
+
+DESIGN DIRECTION
+Lean harder into:
+
+* modern luxury
+* coastal California elegance
+* premium editorial layout
+* sophisticated real estate branding
+* strong visual hierarchy
+* custom composition
+* subtle, high-end motion
+
+Reduce anything that feels:
+
+* templated
+* generic
+* too software-SaaS-like
+* too symmetrical in a boring way
+* too boxy
+* too text-heavy
+* too obviously AI-generated
+
+HOMEPAGE IMPROVEMENTS
+Redesign the homepage so it has much more impact.
+
+Improve:
+
+* hero section composition
+* typography scale and pairing
+* section spacing
+* image treatment
+* call-to-action styling
+* luxury visual rhythm
+* balance between content and whitespace
+* premium transitions between sections
+
+The homepage should feel more like a luxury brand experience and less like a typical realtor template.
+
+Make the hero feel much stronger:
+
+* more visually commanding
+* more elegant
+* more expensive
+* cleaner and more confident
+* better use of layered layout, image framing, spacing, and typography
+* stronger CTA design
+* subtle premium motion if appropriate
+
+TYPOGRAPHY
+Upgrade typography so it feels designer-selected and brand appropriate.
+Use a more elevated pairing, such as:
+
+* elegant serif for headings
+* clean modern sans-serif for body and UI
+
+Typography should feel:
+
+* refined
+* expensive
+* highly readable
+* polished
+* not default-looking
+
+SPACING + LAYOUT
+This is one of the most important improvements:
+
+* improve spacing across every section
+* make layout compositions feel more custom
+* vary section structures more intentionally
+* add premium asymmetry where appropriate
+* avoid repetitive stacked blocks that all feel the same
+* create a more editorial flow from top to bottom
+
+Each section should feel intentionally art-directed.
+
+COLOR + MATERIAL FEEL
+Refine the palette and visual tone.
+Use soft coastal OC luxury tones with a more premium feel:
+
+* warm white
+* sand
+* muted taupe
+* light stone
+* blue-gray accents
+* deep charcoal for contrast
+
+The site should feel airy, calm, upscale, and coastal — not cold or corporate.
+
+COMPONENT POLISH
+Upgrade all UI components:
+
+* buttons
+* cards
+* listing previews
+* nav bar
+* footer
+* testimonial cards
+* forms
+* area cards
+* video section styling
+
+Everything should feel more premium and custom.
+
+IMAGERY TREATMENT
+Improve how placeholder images are presented:
+
+* better cropping
+* more luxurious framing
+* more elegant aspect ratios
+* stronger layout relationship between text and image
+* use placeholders in a way that still feels premium
+
+VIDEO SECTION
+Make the homepage featured video section feel more high-end and intentional.
+The embed should feel professionally integrated into the design, not dropped in as a default YouTube block.
+
+INTERIOR PAGES
+Upgrade all internal pages so they visually match the homepage quality.
+They should not feel like secondary filler pages.
+
+Especially improve:
+
+* About page
+* Buyers page
+* Sellers page
+* Investors page
+* Areas page
+* Video Gallery
+* Contact page
+
+Each page should have a strong hero, premium layout, and more custom composition.
+
+AREAS PAGE
+Make the communities / areas section feel more luxurious and useful.
+Present Irvine, Newport Beach, Huntington Beach, and Los Angeles in a more elevated way, with a lifestyle-driven presentation.
+
+LOGO / BRANDING
+Refine the logo directions so they feel more premium and real-estate-brand appropriate.
+Focus on elegant, timeless, high-end branding.
+The logo should feel like something a real client could actually approve and use.
+
+MOTION / ANIMATION
+Keep motion subtle and premium only.
+Use tasteful motion to add polish, not gimmicks.
+Think luxury brand website, not startup landing page.
+
+MOBILE EXPERIENCE
+Make sure mobile still feels premium, not just compressed.
+Pay close attention to:
+
+* spacing
+* menu design
+* CTA visibility
+* typography scale
+* image presentation
+* scroll experience
+
+IMPORTANT
+Do not rebuild this into a different concept.
+Keep the same brand, structure, and strategy, but improve the art direction, polish, sophistication, and perceived value dramatically.
+
+FINAL RESULT
+I want the updated site to feel:
+
+* more expensive
+* more custom
+* more luxurious
+* more editorial
+* more trustworthy
+* more visually memorable
+* more like a top-tier real estate brand in Southern California

@@ -31,26 +31,31 @@ export function Navigation() {
   return (
     <>
       <header 
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm py-4" : "bg-transparent py-6"
+        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+          isScrolled 
+            ? "bg-background/95 backdrop-blur-md border-b border-border/50 py-4" 
+            : "bg-transparent py-6"
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="z-50">
+          <Link href="/" className="z-50 cursor-pointer">
             <div className="flex flex-col">
-              <span className="font-serif text-2xl tracking-wide text-foreground">Susan Wang</span>
-              <span className="text-[0.65rem] tracking-[0.2em] uppercase text-primary mt-0.5">Group</span>
+              <span className={`font-serif text-2xl tracking-wide ${isScrolled || mobileMenuOpen ? 'text-foreground' : (location === '/' ? 'text-foreground' : 'text-foreground')} transition-colors`}>Susan Wang</span>
+              <div className="h-[1px] w-full bg-foreground/20 my-0.5"></div>
+              <span className={`text-[0.65rem] tracking-[0.2em] uppercase ${isScrolled || mobileMenuOpen ? 'text-foreground/70' : 'text-foreground/70'} transition-colors`}>Group</span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            <ul className="flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-10">
+            <ul className="flex items-center space-x-8">
               {navLinks.slice(1, -1).map((link) => (
                 <li key={link.name}>
-                  <Link href={link.path}>
-                    <span className={`text-sm tracking-wide transition-colors hover:text-primary ${
-                      location === link.path ? "text-primary" : "text-foreground/80"
+                  <Link href={link.path} className="cursor-pointer">
+                    <span className={`text-[13px] tracking-widest uppercase transition-colors hover:text-primary ${
+                      location === link.path 
+                        ? "text-foreground font-medium" 
+                        : (isScrolled ? "text-foreground/70" : (location === '/' ? 'text-foreground/80' : 'text-foreground/80'))
                     }`}>
                       {link.name}
                     </span>
@@ -58,15 +63,25 @@ export function Navigation() {
                 </li>
               ))}
             </ul>
-            <CTAButton href="/contact">Book Consultation</CTAButton>
+            <Link href="/contact" className="cursor-pointer">
+              <span className={`text-[11px] tracking-[0.15em] uppercase border px-5 py-3 transition-colors ${
+                isScrolled 
+                  ? 'border-foreground text-foreground hover:bg-foreground hover:text-background' 
+                  : (location === '/' ? 'border-foreground text-foreground hover:bg-foreground hover:text-background' : 'border-foreground text-foreground hover:bg-foreground hover:text-background')
+              }`}>
+                Book Consultation
+              </span>
+            </Link>
           </nav>
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="lg:hidden z-50 p-2 -mr-2 text-foreground"
+            className={`lg:hidden z-50 p-2 -mr-2 transition-colors ${
+              isScrolled || mobileMenuOpen ? 'text-foreground' : (location === '/' ? 'text-foreground' : 'text-foreground')
+            }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={24} strokeWidth={1} /> : <Menu size={24} strokeWidth={1} />}
           </button>
         </div>
       </header>
@@ -75,31 +90,48 @@ export function Navigation() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-background pt-24 px-6 pb-6 flex flex-col overflow-y-auto lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="fixed inset-0 z-40 bg-[#f4f1eb] pt-32 px-8 pb-12 flex flex-col overflow-y-auto lg:hidden"
           >
-            <nav className="flex flex-col space-y-6 mt-8">
-              {navLinks.map((link) => (
-                <Link key={link.name} href={link.path}>
-                  <span 
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`text-2xl font-serif block ${
-                      location === link.path ? "text-primary" : "text-foreground"
-                    }`}
-                  >
-                    {link.name}
-                  </span>
-                </Link>
+            <nav className="flex flex-col space-y-6 mt-4">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.05 }}
+                >
+                  <Link href={link.path} className="cursor-pointer inline-block">
+                    <span 
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`text-4xl font-serif block font-light tracking-tight ${
+                        location === link.path ? "text-foreground" : "text-foreground/70"
+                      }`}
+                    >
+                      {link.name}
+                    </span>
+                  </Link>
+                </motion.div>
               ))}
             </nav>
-            <div className="mt-12">
-              <CTAButton href="/contact" className="w-full" onClick={() => setMobileMenuOpen(false)}>
-                Book Consultation
-              </CTAButton>
-            </div>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="mt-16"
+            >
+              <Link href="/contact">
+                <span 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block w-full text-center text-xs tracking-[0.2em] uppercase border border-foreground text-foreground py-4 hover:bg-foreground hover:text-white transition-colors cursor-pointer"
+                >
+                  Book Consultation
+                </span>
+              </Link>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
