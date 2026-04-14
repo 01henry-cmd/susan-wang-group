@@ -135,7 +135,7 @@ export default function HomePage() {
       <main className="flex-grow">
 
         {/* ─── HERO ─────────────────────────────────────────────── */}
-        <section ref={heroRef} className="relative min-h-screen flex items-center bg-[#fbf9f6] overflow-hidden">
+        <section ref={heroRef} className="relative min-h-screen pt-20 lg:pt-24 flex items-center bg-[#fbf9f6] overflow-hidden">
 
           {/* Parallax ghost watermark */}
           <motion.div
@@ -148,7 +148,7 @@ export default function HomePage() {
             </span>
           </motion.div>
 
-          <div className="container relative z-10 mx-auto px-6 lg:px-12 pt-32 pb-16 lg:py-0">
+          <div className="container relative z-10 mx-auto px-6 lg:px-12 py-12 lg:py-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
               {/* Left: Staggered text reveal */}
