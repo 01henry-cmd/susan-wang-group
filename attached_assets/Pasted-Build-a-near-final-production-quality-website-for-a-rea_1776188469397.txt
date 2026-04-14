@@ -1,0 +1,357 @@
+Build a near-final production-quality website for a real estate brand called “Susan Wang Group.”
+
+This is NOT just a demo. I want a polished, premium, professional site that feels competitive with top modern real estate agent websites in Orange County and Los Angeles. The final result should feel custom-designed, elegant, trustworthy, and expensive — not like an AI template.
+
+IMPORTANT BUSINESS + TECH REQUIREMENTS
+- Build this so it can be exported cleanly to GitHub and hosted outside of Replit.
+- Choose a stack that is easy to hand off and easy to deploy to Cloudflare Pages.
+- Prioritize a clean GitHub-ready structure with professional file organization.
+- Do NOT make anything dependent on Replit hosting or proprietary Replit-only features.
+- Recommend and use the best stack for this goal: Next.js + Tailwind CSS + static-friendly architecture that can be deployed on Cloudflare Pages.
+- Make it production-grade and easy for a developer to continue working on later.
+- Use reusable components and clean code.
+- Optimize for fast load speed, smooth animations, and polished responsiveness.
+- Use placeholder content/images/videos where needed, but structure everything like a real launch-ready client site.
+
+BRAND DETAILS
+- Brand name: Susan Wang Group
+- Brokerage affiliation: Coldwell Banker
+- DRE#: 02132358
+- Motto: “Helping clients buy, sell & invest with strategy and clarity.”
+- Primary markets: Orange County and Los Angeles
+- Priority cities to feature:
+  - Irvine
+  - Newport Beach
+  - Huntington Beach
+  - Los Angeles
+- Language: English only
+- Positioning: modern luxury
+- Color palette: soft coastal Orange County tones
+- Visual tone: elevated, calm, refined, premium, trustworthy, clean, coastal luxury
+- This is for one agent, not a large team
+
+DESIGN DIRECTION
+Create a site that feels:
+- modern luxury
+- editorial
+- high trust
+- clean and premium
+- coastal California
+- more custom-designed than templated
+- elegant without being flashy
+- sophisticated but approachable
+
+Avoid:
+- generic AI website feel
+- cheesy stock “real estate template” styling
+- overly corporate blue-box brokerage look
+- cluttered layouts
+- excessive text walls
+- cheap animations
+- obvious placeholder-template sections
+
+Use:
+- beautiful whitespace
+- strong typography hierarchy
+- refined spacing system
+- subtle motion
+- tasteful hover effects
+- smooth section transitions
+- premium card layouts
+- large, confident imagery
+- soft shadows only where appropriate
+- polished mobile responsiveness
+- strong CTA design
+- elegant luxury-inspired layout composition
+
+TECHNICAL STACK
+Please use:
+- Next.js
+- Tailwind CSS
+- component-based architecture
+- static/export-friendly setup for GitHub + Cloudflare Pages deployment
+- clean folder structure
+- reusable UI sections
+- image placeholders
+- YouTube embeds handled professionally and responsively
+- forms structured cleanly for later integration
+- no database required for now
+- no IDX integration yet, but architecture should be IDX/MLS-ready later
+
+DELIVERABLE GOALS
+I want a complete website with:
+1. strong homepage
+2. well-designed internal pages
+3. polished branding
+4. custom logo concept
+5. placeholders for agent headshots, listing photos, lifestyle imagery, and videos
+6. future-ready structure for listings / IDX
+7. clear lead capture pathways for booking consultations
+8. strong trust-building sections
+
+SITE ARCHITECTURE
+Build these pages:
+
+1. Home
+2. About Susan
+3. Buyers
+4. Sellers
+5. Investors
+6. Communities / Areas Served
+7. Featured Listings (placeholder / future IDX-ready)
+8. Video Gallery
+9. Testimonials
+10. Contact / Book Consultation
+
+HOMEPAGE REQUIREMENTS
+Design a standout homepage with sections such as:
+
+- premium hero section
+  - large luxury layout
+  - clear headline using the brand and value proposition
+  - supporting copy
+  - primary CTA: Book a Consultation
+  - secondary CTA: Explore Areas
+  - placeholder for professional headshot or cinematic real estate/lifestyle image
+  - possible subtle background motion or video-ready layout
+- brokerage trust bar
+  - mention Coldwell Banker affiliation
+  - display DRE# 02132358 elegantly
+- credibility / positioning section
+  - communicate professionalism, market knowledge, strategic guidance, and clarity
+- buy / sell / invest 3-column service section
+- featured markets section
+  - Irvine
+  - Newport Beach
+  - Huntington Beach
+  - Los Angeles
+- about Susan preview section
+  - elegant personal branding area
+  - room for headshot and bio
+- featured listings preview
+  - use beautiful placeholder listing cards for now
+  - structure should be ready to later swap into MLS/IDX-fed content
+- homepage featured video section
+  - clean professionally embedded YouTube feature
+  - elegant frame and layout
+  - headline + short intro copy
+- testimonials preview carousel or grid
+- process / what it’s like to work with Susan
+- booking CTA section
+- refined footer
+
+ABOUT PAGE
+Create a polished About Susan page with:
+- premium personal brand layout
+- space for 1–3 headshots
+- long-form brand story
+- approach/philosophy section
+- why clients trust Susan section
+- Coldwell Banker affiliation displayed tastefully
+- DRE# displayed properly
+- professional, high-trust tone
+- space for stats/awards placeholders if needed later
+
+BUYERS PAGE
+Include:
+- overview of Susan’s buyer representation approach
+- process section
+- neighborhood/market guidance angle
+- first-time buyer + move-up buyer + luxury buyer messaging
+- booking CTA
+- optional FAQ section
+- premium visuals/placeholders
+
+SELLERS PAGE
+Include:
+- seller strategy positioning
+- marketing approach
+- pricing + preparation + negotiation messaging
+- pre-listing consultation CTA
+- placeholder section for home valuation lead capture
+- elegant, conversion-focused structure
+
+INVESTORS PAGE
+Include:
+- investor-oriented messaging
+- strategy, underwriting mindset, location analysis, long-term value language
+- trusted advisor framing
+- CTA to book an investment consultation
+
+COMMUNITIES / AREAS SERVED PAGE
+Create a beautiful area overview page with premium cards linking to dedicated pages/sections for:
+- Irvine
+- Newport Beach
+- Huntington Beach
+- Los Angeles
+
+Each area section/page should have:
+- hero image placeholder
+- short market/lifestyle description
+- why buyers/sellers/investors like the area
+- sample neighborhood highlights
+- CTA to inquire about homes in that area
+
+FEATURED LISTINGS PAGE
+Important:
+- This page should use elegant placeholder listing cards for now.
+- Build it so it is easy to replace later with IDX/MLS integration.
+- Include filters/search UI as a visual placeholder if useful, but do not fake a real IDX feed.
+- Make architecture future-ready and modular.
+
+VIDEO GALLERY PAGE
+Include:
+- dedicated video gallery layout
+- responsive, professional YouTube embeds
+- featured video at top
+- video card grid below
+- sections for:
+  - market updates
+  - neighborhood tours
+  - buyer/seller education
+- polished, luxury editorial feel
+
+TESTIMONIALS PAGE
+Include:
+- elegant testimonial layouts
+- card/grid/carousel presentation
+- placeholders for client reviews
+- high-trust visual treatment
+- social proof section that feels premium and believable
+
+CONTACT / BOOK PAGE
+Must include:
+- polished booking-focused layout
+- primary CTA: Book a Consultation
+- contact methods:
+  - phone
+  - email
+  - WeChat
+  - Instagram
+- professional inquiry form UI
+- map placeholder or office/service area presentation
+- soft trust-building copy
+- mobile-friendly contact UX
+
+LOGO REQUIREMENT
+Also create a simple logo concept for “Susan Wang Group.”
+I do NOT want anything cheesy or cartoonish.
+
+Please generate 2–3 tasteful logo directions inside the site branding system, such as:
+- elegant wordmark
+- refined SW monogram
+- modern luxury serif/sans combination
+
+The logo should feel:
+- premium
+- coastal luxury
+- clean
+- timeless
+- feminine but still professional
+- suitable for real estate branding
+- compatible with Coldwell Banker affiliation without looking derivative
+
+Use a color palette that works with:
+- soft coastal neutrals
+- sand / cream / white
+- muted blue-gray
+- subtle warm taupe
+- deep charcoal accents
+
+Do not overcomplicate the logo.
+
+CONTENT STYLE
+Write polished placeholder copy that sounds like a real luxury real estate brand.
+Tone should be:
+- strategic
+- trustworthy
+- calm
+- polished
+- confident
+- high-end
+- clear
+- client-focused
+
+Avoid:
+- overhyped sales language
+- cheesy “dream home journey” clichés
+- generic AI copy
+- repetitive fluff
+
+The copy should make Susan sound like a smart, trusted advisor for buying, selling, and investing across Orange County and Los Angeles.
+
+ANIMATION + UX
+Use subtle premium interactions only:
+- smooth fade/slide reveals
+- tasteful hover effects
+- polished navigation transitions
+- sticky header if appropriate
+- elegant mobile menu
+- no over-the-top animation
+- no gimmicks
+
+IMAGE / VIDEO PLACEHOLDERS
+Use tasteful placeholders throughout for:
+- agent headshots
+- lifestyle photography
+- property imagery
+- community visuals
+- video thumbnails / YouTube embeds
+
+Make all placeholders easy to replace later.
+
+NAVIGATION
+Create a premium top nav that includes:
+- Home
+- About
+- Buyers
+- Sellers
+- Investors
+- Areas
+- Listings
+- Videos
+- Testimonials
+- Contact
+
+Include a strong Book Consultation CTA in the header.
+
+FOOTER
+Include:
+- Susan Wang Group
+- Coldwell Banker affiliation
+- DRE# 02132358
+- contact placeholders
+- nav links
+- social placeholders
+- tasteful compliance-ready footer structure
+
+COMPLIANCE / PROFESSIONALISM
+Display brokerage affiliation and DRE number cleanly and professionally.
+Keep the structure compliance-conscious and professional, without making the design look cluttered.
+
+CODE QUALITY
+Please write this like a professional front-end developer and designer would:
+- clean code
+- reusable components
+- scalable structure
+- accessible markup
+- responsive design
+- production-minded decisions
+- no sloppy placeholder implementation
+- no broken sections
+- no incomplete pages
+
+FINAL OUTPUT REQUEST
+Please:
+1. build the full site structure
+2. generate all pages
+3. include polished placeholder copy
+4. include the logo concepts
+5. use placeholder images
+6. set up professional YouTube embed sections
+7. make it GitHub-ready
+8. ensure it is easy to deploy to Cloudflare Pages
+9. provide a short README with deployment instructions for GitHub + Cloudflare Pages
+10. explain where to swap in real images, videos, branding, and future IDX integration
+
+Most important: make this look like a premium real estate website someone would actually pay serious money for.
