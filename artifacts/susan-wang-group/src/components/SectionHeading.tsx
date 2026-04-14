@@ -4,31 +4,36 @@ interface SectionHeadingProps {
   title: string;
   subtitle?: string;
   align?: "left" | "center";
+  size?: "default" | "large";
   className?: string;
-  variant?: "default" | "large";
 }
 
-export function SectionHeading({ title, subtitle, align = "center", className = "", variant = "default" }: SectionHeadingProps) {
+export function SectionHeading({ title, subtitle, align = "center", size = "default", className = "" }: SectionHeadingProps) {
   return (
-    <div className={`mb-12 md:mb-16 ${align === "center" ? "text-center mx-auto max-w-3xl flex flex-col items-center" : "text-left max-w-2xl"} ${className}`}>
+    <div className={`${align === "center" ? "text-center mx-auto max-w-3xl" : "text-left"} ${className}`}>
       {subtitle && (
-        <motion.div 
-          initial={{ opacity: 0, y: 10 }}
+        <motion.p
+          initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className={`flex items-center text-primary text-sm tracking-widest uppercase font-medium mb-4 ${align === "center" ? "justify-center" : "justify-start"}`}
+          className={`text-[10px] tracking-[0.25em] uppercase text-primary font-medium mb-5 flex items-center gap-3 ${align === "center" ? "justify-center" : ""}`}
         >
-          <div className="w-8 h-[1px] bg-primary mr-3"></div>
+          <span className="w-5 h-[1px] bg-primary inline-block shrink-0" />
           {subtitle}
-        </motion.div>
+          {align === "center" && <span className="w-5 h-[1px] bg-primary inline-block shrink-0" />}
+        </motion.p>
       )}
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-        className={`${variant === "large" ? "text-4xl md:text-5xl lg:text-6xl" : "text-3xl md:text-4xl lg:text-5xl"} font-light text-foreground tracking-[-0.02em] md:tracking-[-0.01em]`}
+        transition={{ duration: 0.7, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+        className={`font-serif font-light tracking-tight text-foreground ${
+          size === "large"
+            ? "text-5xl md:text-6xl lg:text-7xl leading-[1.05]"
+            : "text-3xl md:text-4xl lg:text-5xl leading-[1.1]"
+        }`}
       >
         {title}
       </motion.h2>

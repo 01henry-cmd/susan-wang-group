@@ -1,41 +1,45 @@
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-interface CTAButtonProps extends React.ComponentProps<typeof Button> {
+interface CTAButtonProps {
   href?: string;
+  variant?: "default" | "outline" | "ghost";
+  className?: string;
+  onClick?: () => void;
+  children: React.ReactNode;
   showArrow?: boolean;
+  type?: "button" | "submit" | "reset";
 }
 
-export function CTAButton({ children, href, variant = "default", className = "", showArrow = true, ...props }: CTAButtonProps) {
-  const isOutline = variant === "outline";
-  
-  const btn = (
-    <Button 
-      variant={variant} 
-      className={`rounded-none px-8 py-6 text-sm tracking-wider uppercase font-medium transition-all duration-500 group relative overflow-hidden
-        ${isOutline 
-          ? "border border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-white" 
-          : "bg-foreground text-white hover:bg-foreground/90 border border-transparent hover:border-foreground/90"}
-        ${className}`}
-      {...props}
-    >
-      <span className="relative z-10 flex items-center">
-        {children}
-        {showArrow && (
-          <ArrowRight className={`ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 ${isOutline ? 'group-hover:text-white' : ''}`} />
-        )}
-      </span>
-      {/* Decorative thin bottom line on hover for primary buttons */}
-      {!isOutline && (
-        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-0"></span>
+export function CTAButton({ children, href, variant = "default", className = "", showArrow = false, onClick, type = "button" }: CTAButtonProps) {
+  const base = `inline-flex items-center gap-3 text-[11px] tracking-[0.2em] uppercase font-medium transition-all duration-300 group select-none`;
+
+  const styles = {
+    default: `px-8 py-4 bg-foreground text-white hover:bg-foreground/90 ${className}`,
+    outline: `px-8 py-4 border border-foreground text-foreground hover:bg-foreground hover:text-white ${className}`,
+    ghost: `text-foreground/70 hover:text-foreground border-b border-transparent hover:border-foreground/40 pb-0.5 ${className}`,
+  };
+
+  const inner = (
+    <>
+      <span>{children}</span>
+      {(showArrow || variant === "ghost") && (
+        <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
       )}
-    </Button>
+    </>
   );
 
   if (href) {
-    return <Link href={href} className="inline-block">{btn}</Link>;
+    return (
+      <Link href={href} onClick={onClick}>
+        <span className={`${base} ${styles[variant]}`}>{inner}</span>
+      </Link>
+    );
   }
 
-  return btn;
+  return (
+    <button type={type} onClick={onClick} className={`${base} ${styles[variant]}`}>
+      {inner}
+    </button>
+  );
 }
