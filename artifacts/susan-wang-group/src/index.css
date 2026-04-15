@@ -81,20 +81,20 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .07);
 
-  /* Lavender base — clearly purple-tinted, visually distinct */
-  --background: 270 28% 91%;
-  --foreground: 248 20% 13%;
+  /* Barely-lavender base — preserves the clean look, adds whisper of purple */
+  --background: 270 14% 97%;
+  --foreground: 248 14% 16%;
 
-  /* Borders: deeper lavender-grey */
-  --border: 264 20% 78%;
+  /* Borders: cool lavender-grey */
+  --border: 264 12% 88%;
   
-  --card: 270 22% 95%;
-  --card-foreground: 248 20% 13%;
-  --card-border: 264 18% 80%;
+  --card: 270 18% 99%;
+  --card-foreground: 248 14% 16%;
+  --card-border: 264 12% 88%;
 
-  --sidebar: 270 28% 91%;
-  --sidebar-foreground: 248 20% 13%;
-  --sidebar-border: 264 20% 78%;
+  --sidebar: 270 14% 97%;
+  --sidebar-foreground: 248 14% 16%;
+  --sidebar-border: 264 12% 88%;
   --sidebar-primary: 276 32% 54%;
   --sidebar-primary-foreground: 0 0% 100%;
   --sidebar-accent: 270 20% 93%;
@@ -113,17 +113,17 @@
   --secondary: 168 48% 30%;
   --secondary-foreground: 0 0% 100%;
 
-  --muted: 264 20% 84%;
-  --muted-foreground: 248 10% 38%;
+  --muted: 264 12% 93%;
+  --muted-foreground: 248 8% 42%;
 
-  /* ACCENT: Silver-lavender */
-  --accent: 240 22% 86%;
-  --accent-foreground: 248 20% 13%;
+  /* ACCENT: Soft silver-lavender — highlight tone */
+  --accent: 240 20% 92%;
+  --accent-foreground: 248 14% 16%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
-  --input: 264 20% 78%;
+  --input: 264 12% 88%;
   --ring: 276 32% 54%;
   
   --chart-1: 276 32% 54%;

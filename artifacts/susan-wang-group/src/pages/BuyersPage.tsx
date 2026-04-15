@@ -102,7 +102,7 @@ export default function BuyersPage() {
         </section>
 
         {/* Process - Editorial Spread */}
-        <section className="py-32 bg-[#d8d0eb]">
+        <section className="py-32 bg-[#ebe8e2]">
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="mb-20">
               <p className="text-primary text-xs tracking-[0.2em] uppercase font-medium mb-4">Methodology</p>
@@ -129,7 +129,7 @@ export default function BuyersPage() {
         </section>
 
         {/* FAQ */}
-        <section className="py-32 bg-[#f0eaf8]">
+        <section className="py-32 bg-white">
           <div className="container mx-auto px-6 max-w-4xl">
             <div className="mb-16 text-center">
               <h2 className="font-serif text-4xl font-light tracking-tight mb-4">Common Inquiries</h2>

@@ -56,8 +56,8 @@ export default function TestimonialsPage() {
       
       <main className="flex-grow pt-32">
         {/* Editorial Opener */}
-        <section className="py-24 bg-[#f0eaf8] relative overflow-hidden">
-          <div className="absolute inset-0 bg-[#d8d0eb] -skew-y-2 origin-top-left -z-10 scale-110"></div>
+        <section className="py-24 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[#ebe8e2] -skew-y-2 origin-top-left -z-10 scale-110"></div>
           
           <div className="container mx-auto px-6 text-center max-w-5xl relative z-10">
             <motion.div
