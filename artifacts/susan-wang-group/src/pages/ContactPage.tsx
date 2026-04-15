@@ -116,8 +116,22 @@ export default function ContactPage() {
                   <div className="flex items-start group">
                     <Instagram className="w-5 h-5 text-primary shrink-0 mr-6 mt-1" strokeWidth={1.5} />
                     <div>
-                      <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-foreground/50 mb-2">Social</h4>
+                      <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-foreground/50 mb-2">Instagram</h4>
                       <a href="#" className="text-lg font-light hover:text-primary transition-colors border-b border-transparent group-hover:border-primary pb-1">@susanwanggroup</a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start pt-8 border-t border-border">
+                    <svg viewBox="0 0 24 24" className="w-5 h-5 text-primary shrink-0 mr-6 mt-1" fill="currentColor" aria-label="WeChat">
+                      <path d="M8.7 11.4c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9zm4.6 0c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9zM9 5C4 5 0 8.4 0 12.6c0 2.3 1.2 4.4 3.1 5.8l-.7 2.2 2.5-1.4C6 19.7 7.5 20 9 20c.3 0 .6 0 .9-.1C9.6 19.4 9.5 19 9.5 18.5c0-3.6 3.4-6.5 7.5-6.5.3 0 .7 0 1 .1C17.4 8.4 13.6 5 9 5z"/>
+                      <path d="M21.6 22l-1.9-1.1c-1 .4-2.1.6-3.2.6-3.5 0-6.3-2.3-6.3-5.2S13 11 16.5 11s6.3 2.3 6.3 5.2c0 1.5-.7 2.8-1.9 3.8L21.6 22zm-5.2-7.8c-.4 0-.8.3-.8.8s.4.8.8.8.8-.3.8-.8-.3-.8-.8-.8zm3.2 0c-.4 0-.8.3-.8.8s.4.8.8.8.8-.3.8-.8-.3-.8-.8-.8z"/>
+                    </svg>
+                    <div>
+                      <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-foreground/50 mb-3">WeChat</h4>
+                      <div className="border border-border p-3 inline-block bg-white shadow-sm">
+                        <img src="/wechat-qr.jpg" alt="WeChat QR Code" className="w-28 h-28 object-contain" />
+                        <p className="text-[9px] tracking-[0.18em] uppercase text-foreground/40 text-center mt-2">Scan to connect</p>
+                      </div>
                     </div>
                   </div>
                 </div>
