@@ -93,7 +93,7 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5 text-primary shrink-0 mr-6 mt-1" strokeWidth={1.5} />
                     <div>
                       <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-foreground/50 mb-2">Direct</h4>
-                      <a href="tel:+19495550182" className="text-xl font-light hover:text-primary transition-colors">(949) 555-0182</a>
+                      <a href="tel:+17148182511" className="text-xl font-light hover:text-primary transition-colors">(714) 818-2511</a>
                     </div>
                   </div>
                   
@@ -176,7 +176,7 @@ export default function ContactPage() {
                           <FormItem>
                             <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-foreground/50">Phone</FormLabel>
                             <FormControl>
-                              <Input placeholder="(949) 555-0000" className="rounded-none border-t-0 border-x-0 border-b border-border bg-transparent px-0 pb-4 text-lg font-light focus-visible:ring-0 focus-visible:border-foreground transition-colors" {...field} />
+                              <Input placeholder="(714) 818-2511" className="rounded-none border-t-0 border-x-0 border-b border-border bg-transparent px-0 pb-4 text-lg font-light focus-visible:ring-0 focus-visible:border-foreground transition-colors" {...field} />
                             </FormControl>
                             <FormMessage className="text-xs font-light" />
                           </FormItem>

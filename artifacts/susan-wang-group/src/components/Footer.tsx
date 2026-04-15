@@ -70,7 +70,7 @@ export function Footer() {
             <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-white/40 mb-8">Contact</h4>
             <ul className="space-y-6 text-sm font-light text-white/70">
               <li className="flex items-start">
-                <a href="tel:+19495550182" className="hover:text-white transition-colors text-lg">(949) 555-0182</a>
+                <a href="tel:+17148182511" className="hover:text-white transition-colors text-lg">(714) 818-2511</a>
               </li>
               <li className="flex items-start">
                 <a href="mailto:susan@susanwanggroup.com" className="hover:text-white transition-colors text-lg">susan@susanwanggroup.com</a>
