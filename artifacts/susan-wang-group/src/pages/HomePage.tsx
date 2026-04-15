@@ -135,15 +135,32 @@ export default function HomePage() {
       <main className="flex-grow">
 
         {/* ─── HERO ─────────────────────────────────────────────── */}
-        <section ref={heroRef} className="relative min-h-screen pt-20 lg:pt-24 flex items-center bg-[#fbf9f6] overflow-hidden">
+        <section ref={heroRef} className="relative min-h-screen pt-20 lg:pt-24 flex items-center bg-[#f7f5fb] overflow-hidden">
 
-          {/* Parallax ghost watermark */}
+          {/* Flower texture — very subtle background */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage: "url('/flower-bg.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center right",
+              opacity: 0.055,
+              mixBlendMode: "multiply",
+            }}
+          />
+
+          {/* Parallax ghost S watermark — more visible, in primary color */}
           <motion.div
             style={{ y: watermarkY }}
             className="absolute inset-0 flex items-center justify-start pl-[2vw] pointer-events-none overflow-hidden"
           >
-            <span className="font-serif italic text-foreground/[0.022] leading-none select-none"
-              style={{ fontSize: "44vw" }}>
+            <span
+              className="font-serif italic leading-none select-none"
+              style={{
+                fontSize: "44vw",
+                color: "hsl(276 32% 54% / 0.10)",
+              }}
+            >
               S
             </span>
           </motion.div>
@@ -268,7 +285,7 @@ export default function HomePage() {
         </motion.section>
 
         {/* ─── ABOUT PREVIEW ────────────────────────────────────── */}
-        <section className="py-28 lg:py-36 bg-[#fbf9f6]">
+        <section className="py-28 lg:py-36 bg-[#f7f5fb]">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
 
@@ -417,7 +434,7 @@ export default function HomePage() {
         </section>
 
         {/* ─── SERVICES EDITORIAL ───────────────────────────────── */}
-        <section className="py-28 lg:py-36 bg-[#edebe6]">
+        <section className="py-28 lg:py-36 bg-[#edeaf5]">
           <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
@@ -528,14 +545,18 @@ export default function HomePage() {
         </section>
 
         {/* ─── TESTIMONIAL DARK ─────────────────────────────────── */}
-        <section className="py-28 lg:py-36 bg-[#1c1c1a] text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.05]">
-            <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
-              alt=""
-              className="w-full h-full object-cover"
-            />
-          </div>
+        <section className="py-28 lg:py-36 bg-[#100e1b] text-white relative overflow-hidden">
+          {/* Flower texture very subtle on dark background */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage: "url('/flower-bg.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              opacity: 0.08,
+              mixBlendMode: "screen",
+            }}
+          />
           <div className="container mx-auto px-6 lg:px-12 relative z-10">
 
             {/* Pull quote */}
@@ -602,7 +623,7 @@ export default function HomePage() {
         </section>
 
         {/* ─── FINAL CTA ────────────────────────────────────────── */}
-        <section ref={ctaRef} className="relative py-36 lg:py-48 bg-[#fbf9f6] flex items-center justify-center overflow-hidden">
+        <section ref={ctaRef} className="relative py-36 lg:py-48 bg-[#f7f5fb] flex items-center justify-center overflow-hidden">
 
           {/* Slow drifting watermark */}
           <motion.div

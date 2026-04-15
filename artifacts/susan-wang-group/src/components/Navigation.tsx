@@ -34,10 +34,10 @@ export function Navigation() {
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 w-full z-50 transition-all duration-700 ${
           isScrolled
-            ? "bg-[#fbf9f6]/95 backdrop-blur-md border-b border-foreground/10 py-4"
+            ? "bg-[#f7f5fb]/96 backdrop-blur-md border-b border-foreground/10 py-4"
             : isHome
-            ? "bg-[#fbf9f6]/70 backdrop-blur-sm border-b border-foreground/12 py-6"
-            : "bg-[#fbf9f6]/80 backdrop-blur-sm border-b border-foreground/10 py-5"
+            ? "bg-[#f7f5fb]/72 backdrop-blur-sm border-b border-foreground/12 py-6"
+            : "bg-[#f7f5fb]/82 backdrop-blur-sm border-b border-foreground/10 py-5"
         }`}
       >
         <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
@@ -110,7 +110,7 @@ export function Navigation() {
             animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }}
             exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 bg-[#f5f2ec] pt-28 px-8 pb-12 flex flex-col overflow-y-auto lg:hidden"
+            className="fixed inset-0 z-40 bg-[#f0edf8] pt-28 px-8 pb-12 flex flex-col overflow-y-auto lg:hidden"
           >
             <nav className="flex flex-col space-y-1 mt-4 border-t border-foreground/10">
               {[{ name: "Home", path: "/" }, ...navLinks, { name: "Contact", path: "/contact" }].map((link, i) => (
