@@ -158,7 +158,7 @@ export default function HomePage() {
               className="font-serif italic leading-none select-none"
               style={{
                 fontSize: "44vw",
-                color: "hsl(276 32% 54% / 0.10)",
+                color: "hsl(276 42% 36% / 0.10)",
               }}
             >
               S
