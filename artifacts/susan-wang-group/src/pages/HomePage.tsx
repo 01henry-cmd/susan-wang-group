@@ -129,27 +129,27 @@ export default function HomePage() {
   const imageY = useTransform(heroScroll, [0, 1], ["0%", "10%"]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fbf9f6]">
+    <div className="min-h-screen flex flex-col bg-[#e8e2f5]">
       <Navigation />
 
       <main className="flex-grow">
 
         {/* ─── HERO ─────────────────────────────────────────────── */}
-        <section ref={heroRef} className="relative min-h-screen pt-20 lg:pt-24 flex items-center bg-[#f7f5fb] overflow-hidden">
+        <section ref={heroRef} className="relative min-h-screen pt-20 lg:pt-24 flex items-center bg-[#e8e2f5] overflow-hidden">
 
-          {/* Flower texture — very subtle background */}
+          {/* Flower texture — clearly present */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
               backgroundImage: "url('/flower-bg.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center right",
-              opacity: 0.055,
+              opacity: 0.22,
               mixBlendMode: "multiply",
             }}
           />
 
-          {/* Parallax ghost S watermark — more visible, in primary color */}
+          {/* Parallax ghost S watermark — bold and dramatic */}
           <motion.div
             style={{ y: watermarkY }}
             className="absolute inset-0 flex items-center justify-start pl-[2vw] pointer-events-none overflow-hidden"
@@ -158,7 +158,7 @@ export default function HomePage() {
               className="font-serif italic leading-none select-none"
               style={{
                 fontSize: "44vw",
-                color: "hsl(276 32% 54% / 0.10)",
+                color: "hsl(276 38% 44% / 0.20)",
               }}
             >
               S
@@ -285,7 +285,7 @@ export default function HomePage() {
         </motion.section>
 
         {/* ─── ABOUT PREVIEW ────────────────────────────────────── */}
-        <section className="py-28 lg:py-36 bg-[#f7f5fb]">
+        <section className="py-28 lg:py-36 bg-[#ede7f8]">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
 
@@ -387,7 +387,7 @@ export default function HomePage() {
         </section>
 
         {/* ─── FEATURED LISTINGS ────────────────────────────────── */}
-        <section className="py-28 lg:py-36 bg-white">
+        <section className="py-28 lg:py-36 bg-[#f0eaf8]">
           <div className="container mx-auto px-6 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
@@ -434,7 +434,7 @@ export default function HomePage() {
         </section>
 
         {/* ─── SERVICES EDITORIAL ───────────────────────────────── */}
-        <section className="py-28 lg:py-36 bg-[#edeaf5]">
+        <section className="py-28 lg:py-36 bg-[#ddd5f2]">
           <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
@@ -503,7 +503,7 @@ export default function HomePage() {
         </section>
 
         {/* ─── COMMUNITIES ──────────────────────────────────────── */}
-        <section className="py-28 lg:py-36 bg-white">
+        <section className="py-28 lg:py-36 bg-[#ede7f8]">
           <div className="container mx-auto px-6 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
@@ -546,14 +546,14 @@ export default function HomePage() {
 
         {/* ─── TESTIMONIAL DARK ─────────────────────────────────── */}
         <section className="py-28 lg:py-36 bg-[#100e1b] text-white relative overflow-hidden">
-          {/* Flower texture very subtle on dark background */}
+          {/* Flower texture — bold on dark background */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
               backgroundImage: "url('/flower-bg.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              opacity: 0.08,
+              opacity: 0.20,
               mixBlendMode: "screen",
             }}
           />
@@ -623,7 +623,7 @@ export default function HomePage() {
         </section>
 
         {/* ─── FINAL CTA ────────────────────────────────────────── */}
-        <section ref={ctaRef} className="relative py-36 lg:py-48 bg-[#f7f5fb] flex items-center justify-center overflow-hidden">
+        <section ref={ctaRef} className="relative py-36 lg:py-48 bg-[#e8e2f5] flex items-center justify-center overflow-hidden">
 
           {/* Slow drifting watermark */}
           <motion.div

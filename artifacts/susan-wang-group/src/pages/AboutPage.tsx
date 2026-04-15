@@ -11,7 +11,7 @@ export default function AboutPage() {
       
       <main className="flex-grow">
         {/* Editorial Header */}
-        <section className="pt-40 pb-20 bg-[#fcfbf9] overflow-hidden relative">
+        <section className="pt-40 pb-20 bg-[#ece7f8] overflow-hidden relative">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-[100px] z-0"></div>
           
           <div className="container mx-auto px-6 relative z-10">
@@ -142,7 +142,7 @@ export default function AboutPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-32 bg-[#ebe8e2] text-center">
+        <section className="py-32 bg-[#d8d0eb] text-center">
           <div className="container mx-auto px-6">
             <h2 className="font-serif text-4xl md:text-5xl mb-8 font-light">Discuss Your Real Estate Goals</h2>
             <p className="text-foreground/70 mb-10 max-w-md mx-auto font-light text-lg">

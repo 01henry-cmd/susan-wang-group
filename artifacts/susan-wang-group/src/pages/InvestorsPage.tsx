@@ -47,7 +47,7 @@ export default function InvestorsPage() {
         {/* Philosophy */}
         <section className="py-32">
           <div className="container mx-auto px-6 max-w-7xl">
-            <div className="bg-[#ebe8e2] p-12 md:p-24 relative overflow-hidden flex flex-col md:flex-row gap-16 items-center">
+            <div className="bg-[#d8d0eb] p-12 md:p-24 relative overflow-hidden flex flex-col md:flex-row gap-16 items-center">
               <div className="absolute -top-32 -right-32 w-96 h-96 bg-white rounded-full blur-3xl opacity-50 pointer-events-none" />
               
               <div className="md:w-5/12 relative z-10">
@@ -71,7 +71,7 @@ export default function InvestorsPage() {
         </section>
 
         {/* Services */}
-        <section className="py-32 bg-white">
+        <section className="py-32 bg-[#f0eaf8]">
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="mb-20">
               <p className="text-primary text-xs tracking-[0.2em] uppercase font-medium mb-4">Focus Areas</p>

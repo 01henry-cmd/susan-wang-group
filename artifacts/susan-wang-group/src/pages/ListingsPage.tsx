@@ -73,7 +73,7 @@ export default function ListingsPage() {
       <Navigation />
       
       <main className="flex-grow pt-32">
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-[#f0eaf8]">
           <div className="container mx-auto px-6 max-w-7xl">
             
             <motion.div 

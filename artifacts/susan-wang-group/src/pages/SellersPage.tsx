@@ -135,7 +135,7 @@ export default function SellersPage() {
         </section>
 
         {/* Sales Process */}
-        <section className="py-32 bg-white">
+        <section className="py-32 bg-[#f0eaf8]">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="mb-20">
               <p className="text-primary text-xs tracking-[0.2em] uppercase font-medium mb-4">Timeline</p>

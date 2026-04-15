@@ -85,7 +85,7 @@ export default function CommunitiesPage() {
               </div>
             </div>
             
-            <div className="mt-40 text-center bg-[#ebe8e2] p-16 md:p-24">
+            <div className="mt-40 text-center bg-[#d8d0eb] p-16 md:p-24">
               <h3 className="font-serif text-3xl md:text-4xl mb-8 font-light tracking-tight">Seeking insights on a specific neighborhood?</h3>
               <CTAButton href="/contact" variant="outline">Request Neighborhood Report</CTAButton>
             </div>

@@ -55,7 +55,7 @@ export default function ContactPage() {
               alt="Luxury Office" 
               className="w-full h-full object-cover object-center grayscale opacity-60"
             />
-            <div className="absolute inset-0 bg-[#ebe8e2]/80 mix-blend-overlay" />
+            <div className="absolute inset-0 bg-[#c4b8e0]/80 mix-blend-overlay" />
             <div className="absolute inset-0 bg-white/60" />
           </div>
           
