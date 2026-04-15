@@ -226,8 +226,8 @@ export default function HomePage() {
                   >
                     <motion.div style={{ y: imageY }} className="w-full h-[115%] -mt-[7.5%]">
                       <img
-                        src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80"
-                        alt="Luxury coastal home"
+                        src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80"
+                        alt="Luxury Southern California home"
                         className="w-full h-full object-cover object-center"
                       />
                     </motion.div>
