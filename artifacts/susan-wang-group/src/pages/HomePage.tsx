@@ -3,9 +3,16 @@ import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
 import { ListingCard } from "@/components/ListingCard";
 import { CommunityCard } from "@/components/CommunityCard";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+
+const heroImages = [
+  "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1400&q=85",
+  "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1400&q=85",
+  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=85",
+  "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1400&q=85",
+];
 
 const listings = [
   {
@@ -120,6 +127,12 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export default function HomePage() {
   const heroRef = useRef<HTMLElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+  const [heroIdx, setHeroIdx] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setHeroIdx(i => (i + 1) % heroImages.length), 6000);
+    return () => clearInterval(id);
+  }, []);
 
   const { scrollYProgress: heroScroll } = useScroll({
     target: heroRef,
@@ -224,14 +237,37 @@ export default function HomePage() {
                     transition={{ duration: 1.1, delay: 0.25, ease }}
                     className="absolute inset-0 overflow-hidden"
                   >
-                    <motion.div style={{ y: imageY }} className="w-full h-[115%] -mt-[7.5%]">
-                      <img
-                        src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80"
-                        alt="Luxury Southern California home"
-                        className="w-full h-full object-cover object-center"
-                      />
+                    <motion.div style={{ y: imageY }} className="w-full h-[115%] -mt-[7.5%] relative">
+                      <AnimatePresence mode="sync" initial={false}>
+                        <motion.div
+                          key={heroIdx}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 1.6, ease: "easeInOut" }}
+                          className={`absolute inset-0 w-full h-full kenburns-${(heroIdx % 4) + 1}`}
+                          style={{
+                            backgroundImage: `url(${heroImages[heroIdx]})`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                          }}
+                        />
+                      </AnimatePresence>
                     </motion.div>
                     <div className="absolute inset-0 bg-[#3a2010]/8 mix-blend-multiply" />
+
+                    {/* Dot indicators */}
+                    <div className="absolute bottom-4 right-4 flex gap-2 z-10">
+                      {heroImages.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => setHeroIdx(i)}
+                          className={`w-1.5 h-1.5 rounded-full transition-all duration-500 ${
+                            i === heroIdx ? "bg-white/90 w-4" : "bg-white/35"
+                          }`}
+                        />
+                      ))}
+                    </div>
                   </motion.div>
 
                   {/* Offset decorative frame */}

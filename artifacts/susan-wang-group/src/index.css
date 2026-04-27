@@ -241,3 +241,26 @@
     border-radius: 0;
   }
 }
+
+/* ─── KEN BURNS CINEMATIC ZOOM ANIMATIONS ────────────────────── */
+@keyframes kb1 {
+  from { transform: scale(1.0) translate(0%, 0%); }
+  to   { transform: scale(1.14) translate(-2.5%, -1.5%); }
+}
+@keyframes kb2 {
+  from { transform: scale(1.08) translate(2%, 1%); }
+  to   { transform: scale(1.18) translate(-1.5%, -2%); }
+}
+@keyframes kb3 {
+  from { transform: scale(1.0) translate(-2%, 1%); }
+  to   { transform: scale(1.13) translate(2%, -1%); }
+}
+@keyframes kb4 {
+  from { transform: scale(1.06) translate(1%, 2%); }
+  to   { transform: scale(1.16) translate(-1%, -0.5%); }
+}
+
+.kenburns-1 { animation: kb1 8s ease-in-out forwards; }
+.kenburns-2 { animation: kb2 8s ease-in-out forwards; }
+.kenburns-3 { animation: kb3 8s ease-in-out forwards; }
+.kenburns-4 { animation: kb4 8s ease-in-out forwards; }
