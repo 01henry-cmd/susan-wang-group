@@ -8,10 +8,12 @@ export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isHome = location === "/";
+  const transparent = isHome && !isScrolled;
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 40);
+    const handleScroll = () => setIsScrolled(window.scrollY > 60);
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -33,22 +35,26 @@ export function Navigation() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 w-full z-50 transition-all duration-700 ${
-          isScrolled
+          transparent
+            ? "bg-transparent border-b border-transparent py-6"
+            : isScrolled
             ? "bg-[#f7f5fb]/96 backdrop-blur-md border-b border-foreground/10 py-4"
-            : isHome
-            ? "bg-[#f7f5fb]/72 backdrop-blur-sm border-b border-foreground/12 py-6"
-            : "bg-[#f7f5fb]/82 backdrop-blur-sm border-b border-foreground/10 py-5"
+            : "bg-[#f7f5fb]/88 backdrop-blur-sm border-b border-foreground/10 py-5"
         }`}
       >
         <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
 
-          {/* Logo */}
+          {/* Logo — inverted white when over hero, dark otherwise */}
           <Link href="/" className="z-50 cursor-pointer shrink-0">
             <img
               src="/logo.png"
               alt="Susan Wang Group"
-              className="h-14 w-auto object-contain"
-              style={{ maxWidth: "220px" }}
+              className="w-auto object-contain transition-all duration-700"
+              style={{
+                height: "clamp(3.5rem, 5vw, 5rem)",
+                maxWidth: "280px",
+                filter: transparent ? "brightness(0) invert(1)" : "none",
+              }}
             />
           </Link>
 
@@ -64,12 +70,18 @@ export function Navigation() {
                 >
                   <Link href={link.path}>
                     <span className={`text-[11px] tracking-[0.16em] uppercase transition-colors duration-300 relative group ${
-                      location === link.path
+                      transparent
+                        ? location === link.path
+                          ? "text-white"
+                          : "text-white/60 hover:text-white"
+                        : location === link.path
                         ? "text-foreground"
-                        : "text-foreground/55 hover:text-foreground"
+                        : "text-foreground/50 hover:text-foreground"
                     }`}>
                       {link.name}
-                      <span className={`absolute -bottom-1 left-0 h-px bg-primary transition-all duration-300 ${
+                      <span className={`absolute -bottom-1 left-0 h-px transition-all duration-300 ${
+                        transparent ? "bg-white/80" : "bg-primary"
+                      } ${
                         location === link.path ? "w-full" : "w-0 group-hover:w-full"
                       }`} />
                     </span>
@@ -84,7 +96,11 @@ export function Navigation() {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <Link href="/contact">
-                <span className="text-[10px] tracking-[0.18em] uppercase border border-foreground/70 text-foreground/80 hover:bg-foreground hover:text-white hover:border-foreground px-5 py-3 transition-all duration-300 inline-block">
+                <span className={`text-[10px] tracking-[0.18em] uppercase px-5 py-3 transition-all duration-500 inline-block ${
+                  transparent
+                    ? "border border-white/50 text-white/80 hover:bg-white hover:text-foreground hover:border-white"
+                    : "border border-foreground/60 text-foreground/75 hover:bg-foreground hover:text-white hover:border-foreground"
+                }`}>
                   Book Consultation
                 </span>
               </Link>
@@ -93,7 +109,9 @@ export function Navigation() {
 
           {/* Mobile toggle */}
           <button
-            className="lg:hidden z-50 p-2 -mr-2 text-foreground"
+            className={`lg:hidden z-50 p-2 -mr-2 transition-colors duration-500 ${
+              transparent ? "text-white" : "text-foreground"
+            }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen
