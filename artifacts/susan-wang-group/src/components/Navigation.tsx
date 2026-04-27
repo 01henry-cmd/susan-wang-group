@@ -44,11 +44,12 @@ export function Navigation() {
 
           {/* Logo */}
           <Link href="/" className="z-50 cursor-pointer shrink-0">
-            <div className="flex flex-col leading-none">
-              <span className="font-serif text-[1.45rem] tracking-wide text-foreground">Susan Wang</span>
-              <div className="h-px w-full bg-foreground/18 my-[3px]" />
-              <span className="text-[0.6rem] tracking-[0.24em] uppercase text-foreground/55">Group</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Susan Wang Group"
+              className="h-14 w-auto object-contain"
+              style={{ maxWidth: "220px" }}
+            />
           </Link>
 
           {/* Desktop Nav */}

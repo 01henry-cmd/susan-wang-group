@@ -8,12 +8,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 mb-24">
           
           <div className="col-span-1 md:col-span-2 lg:col-span-4">
-            <Link href="/">
-              <div className="flex flex-col mb-8 cursor-pointer max-w-fit">
-                <span className="font-serif text-3xl tracking-wide text-white font-light">Susan Wang</span>
-                <div className="h-[1px] w-full bg-white/20 my-1"></div>
-                <span className="text-[0.65rem] tracking-[0.2em] uppercase text-white/50">Group</span>
-              </div>
+            <Link href="/" className="cursor-pointer block mb-8 max-w-fit">
+              <img
+                src="/logo.png"
+                alt="Susan Wang Group"
+                className="h-14 w-auto object-contain"
+                style={{ maxWidth: "210px", filter: "brightness(0) invert(1)" }}
+              />
             </Link>
             <p className="text-white/60 text-base font-light leading-relaxed mb-10 max-w-sm">
               Helping clients buy, sell & invest with strategy and clarity in Orange County and Los Angeles.
