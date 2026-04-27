@@ -148,153 +148,130 @@ export default function HomePage() {
       <main className="flex-grow">
 
         {/* ─── HERO ─────────────────────────────────────────────── */}
-        <section ref={heroRef} className="relative min-h-screen pt-20 lg:pt-24 flex items-center bg-[#f7f5fb] overflow-hidden">
+        <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
 
-          {/* Flower texture — very subtle background */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundImage: "url('/flower-bg.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center right",
-              opacity: 0.055,
-              mixBlendMode: "multiply",
-            }}
-          />
+          {/* ── Full-bleed Ken Burns slideshow ── */}
+          <div className="absolute inset-0 z-0">
+            <AnimatePresence mode="sync" initial={false}>
+              <motion.div
+                key={heroIdx}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1.8, ease: "easeInOut" }}
+                className={`absolute inset-0 w-full h-full kenburns-${(heroIdx % 4) + 1}`}
+                style={{
+                  backgroundImage: `url(${heroImages[heroIdx]})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+            </AnimatePresence>
 
-          {/* Parallax ghost S watermark — more visible, in primary color */}
+            {/* Layered overlays for depth + text legibility */}
+            <div className="absolute inset-0 bg-black/38" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
+          </div>
+
+          {/* Parallax ghost S watermark */}
           <motion.div
             style={{ y: watermarkY }}
-            className="absolute inset-0 flex items-center justify-start pl-[2vw] pointer-events-none overflow-hidden"
+            className="absolute inset-0 flex items-center justify-start pl-[2vw] pointer-events-none overflow-hidden z-[1]"
           >
             <span
               className="font-serif italic leading-none select-none"
               style={{
                 fontSize: "44vw",
-                color: "hsl(276 42% 36% / 0.10)",
+                color: "rgba(255,255,255,0.055)",
               }}
             >
               S
             </span>
           </motion.div>
 
-          <div className="container relative z-10 mx-auto px-6 lg:px-12 py-12 lg:py-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Text content */}
+          <div className="container relative z-10 mx-auto px-6 lg:px-16 pt-24 pb-28">
+            <div className="max-w-3xl">
 
-              {/* Left: Staggered text reveal */}
-              <div className="order-2 lg:order-1">
-                {/* Animated rule line */}
-                <motion.div
-                  initial={{ scaleX: 0, originX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 0.7, delay: 0.2, ease }}
-                  className="w-8 h-px bg-primary mb-8 origin-left"
-                />
+              {/* Animated rule line */}
+              <motion.div
+                initial={{ scaleX: 0, originX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.7, delay: 0.2, ease }}
+                className="w-8 h-px bg-white/60 mb-8 origin-left"
+              />
 
-                <h1 className="font-serif font-light leading-[1.06] tracking-[-0.02em] text-foreground mb-7 overflow-hidden"
-                  style={{ fontSize: "clamp(3rem, 6vw, 5.5rem)" }}>
-                  {heroLines.map((line, i) => (
-                    <motion.span
-                      key={line}
-                      className={`block ${i === 1 ? "text-primary" : ""}`}
-                      initial={{ y: "100%", opacity: 0 }}
-                      animate={{ y: "0%", opacity: 1 }}
-                      transition={{ duration: 0.85, delay: 0.35 + i * 0.1, ease }}
-                    >
-                      {i === 1 ? <em className="not-italic">{line}</em> : line}
-                    </motion.span>
-                  ))}
-                </h1>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.85, ease }}
-                  className="text-base text-foreground/58 font-light leading-relaxed max-w-sm mb-12"
-                >
-                  Helping discerning clients buy, sell, and invest with strategy and clarity across Orange County and Los Angeles.
-                </motion.p>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 1.0, ease }}
-                  className="flex flex-col sm:flex-row items-start gap-6"
-                >
-                  <CTAButton href="/contact">Book a Consultation</CTAButton>
-                  <Link href="/listings" className="group inline-flex items-center text-[11px] tracking-[0.2em] uppercase text-foreground/45 hover:text-foreground transition-colors duration-300 mt-4 sm:mt-3">
-                    <span className="border-b border-foreground/15 pb-0.5 group-hover:border-foreground/50 transition-colors">View Portfolio</span>
-                  </Link>
-                </motion.div>
-              </div>
-
-              {/* Right: Clip-path image reveal */}
-              <div className="order-1 lg:order-2 relative">
-                <div className="relative aspect-[4/5] max-w-lg ml-auto">
-                  <motion.div
-                    initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
-                    animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
-                    transition={{ duration: 1.1, delay: 0.25, ease }}
-                    className="absolute inset-0 overflow-hidden"
+              <h1 className="font-serif font-light leading-[1.04] tracking-[-0.02em] text-white mb-7 overflow-hidden"
+                style={{ fontSize: "clamp(3rem, 7vw, 6.5rem)" }}>
+                {heroLines.map((line, i) => (
+                  <motion.span
+                    key={line}
+                    className="block"
+                    initial={{ y: "100%", opacity: 0 }}
+                    animate={{ y: "0%", opacity: 1 }}
+                    transition={{ duration: 0.85, delay: 0.35 + i * 0.1, ease }}
                   >
-                    <motion.div style={{ y: imageY }} className="w-full h-[115%] -mt-[7.5%] relative">
-                      <AnimatePresence mode="sync" initial={false}>
-                        <motion.div
-                          key={heroIdx}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 1.6, ease: "easeInOut" }}
-                          className={`absolute inset-0 w-full h-full kenburns-${(heroIdx % 4) + 1}`}
-                          style={{
-                            backgroundImage: `url(${heroImages[heroIdx]})`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                          }}
-                        />
-                      </AnimatePresence>
-                    </motion.div>
-                    <div className="absolute inset-0 bg-[#3a2010]/8 mix-blend-multiply" />
+                    {i === 1
+                      ? <em className="not-italic" style={{ color: "hsl(276 55% 82%)" }}>{line}</em>
+                      : line}
+                  </motion.span>
+                ))}
+              </h1>
 
-                    {/* Dot indicators */}
-                    <div className="absolute bottom-4 right-4 flex gap-2 z-10">
-                      {heroImages.map((_, i) => (
-                        <button
-                          key={i}
-                          onClick={() => setHeroIdx(i)}
-                          className={`w-1.5 h-1.5 rounded-full transition-all duration-500 ${
-                            i === heroIdx ? "bg-white/90 w-4" : "bg-white/35"
-                          }`}
-                        />
-                      ))}
-                    </div>
-                  </motion.div>
+              <motion.p
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.85, ease }}
+                className="text-base text-white/65 font-light leading-relaxed max-w-md mb-12"
+              >
+                Helping discerning clients buy, sell, and invest with strategy and clarity across Orange County and Los Angeles.
+              </motion.p>
 
-                  {/* Offset decorative frame */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 1.1 }}
-                    className="absolute -bottom-5 -left-5 w-full h-full border border-foreground/[0.07] -z-10"
-                  />
-                </div>
-              </div>
-
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 1.0, ease }}
+                className="flex flex-col sm:flex-row items-start gap-6"
+              >
+                <CTAButton href="/contact">Book a Consultation</CTAButton>
+                <Link href="/listings" className="group inline-flex items-center text-[11px] tracking-[0.2em] uppercase text-white/50 hover:text-white transition-colors duration-300 mt-4 sm:mt-3">
+                  <span className="border-b border-white/20 pb-0.5 group-hover:border-white/55 transition-colors">View Portfolio</span>
+                </Link>
+              </motion.div>
             </div>
           </div>
+
+          {/* Dot indicators — bottom center */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.4, duration: 0.8 }}
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-3 z-10"
+          >
+            {heroImages.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setHeroIdx(i)}
+                className={`h-[2px] rounded-full transition-all duration-500 ${
+                  i === heroIdx ? "bg-white/90 w-8" : "bg-white/35 w-3"
+                }`}
+              />
+            ))}
+          </motion.div>
 
           {/* Scroll pulse */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.8, duration: 1 }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 hidden lg:flex"
+            className="absolute bottom-10 right-10 flex-col items-center gap-2 hidden lg:flex"
           >
-            <div className="w-px h-12 bg-foreground/15 relative overflow-hidden">
+            <div className="w-px h-12 bg-white/20 relative overflow-hidden">
               <motion.div
                 animate={{ y: ["-100%", "100%"] }}
                 transition={{ repeat: Infinity, duration: 1.9, ease: "linear" }}
-                className="absolute top-0 w-full h-1/2 bg-foreground/45"
+                className="absolute top-0 w-full h-1/2 bg-white/55"
               />
             </div>
           </motion.div>
