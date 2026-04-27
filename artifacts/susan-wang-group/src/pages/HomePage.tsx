@@ -213,7 +213,7 @@ export default function HomePage() {
                     transition={{ duration: 0.85, delay: 0.35 + i * 0.1, ease }}
                   >
                     {i === 1
-                      ? <em className="not-italic" style={{ color: "hsl(276 55% 82%)" }}>{line}</em>
+                      ? <em className="not-italic" style={{ color: "hsl(276 72% 62%)" }}>{line}</em>
                       : line}
                   </motion.span>
                 ))}

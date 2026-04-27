@@ -95,18 +95,18 @@
   --sidebar: 270 14% 97%;
   --sidebar-foreground: 248 14% 16%;
   --sidebar-border: 264 12% 88%;
-  --sidebar-primary: 276 58% 20%;
+  --sidebar-primary: 276 72% 14%;
   --sidebar-primary-foreground: 0 0% 100%;
   --sidebar-accent: 270 20% 93%;
   --sidebar-accent-foreground: 248 14% 16%;
-  --sidebar-ring: 276 58% 20%;
+  --sidebar-ring: 276 72% 14%;
 
   --popover: 270 18% 99%;
   --popover-foreground: 248 14% 16%;
   --popover-border: 264 12% 88%;
 
   /* PRIMARY: Dusty violet-mauve — from lotus petal mid-shadow */
-  --primary: 276 58% 20%;
+  --primary: 276 72% 14%;
   --primary-foreground: 0 0% 100%;
 
   /* SECONDARY: Dark jade-teal — from the flower stems */
@@ -124,9 +124,9 @@
   --destructive-foreground: 210 40% 98%;
 
   --input: 264 12% 88%;
-  --ring: 276 58% 20%;
+  --ring: 276 72% 14%;
   
-  --chart-1: 276 58% 20%;
+  --chart-1: 276 72% 14%;
   --chart-2: 168 48% 30%;
   --chart-3: 220 18% 72%;
   --chart-4: 310 35% 62%;
@@ -174,15 +174,15 @@
   --sidebar: 270 14% 97%;
   --sidebar-foreground: 248 14% 16%;
   --sidebar-border: 264 12% 88%;
-  --sidebar-primary: 276 58% 20%;
+  --sidebar-primary: 276 72% 14%;
   --sidebar-primary-foreground: 0 0% 100%;
   --sidebar-accent: 270 20% 93%;
   --sidebar-accent-foreground: 248 14% 16%;
-  --sidebar-ring: 276 58% 20%;
+  --sidebar-ring: 276 72% 14%;
   --popover: 270 18% 99%;
   --popover-foreground: 248 14% 16%;
   --popover-border: 264 12% 88%;
-  --primary: 276 58% 20%;
+  --primary: 276 72% 14%;
   --primary-foreground: 0 0% 100%;
   --secondary: 168 48% 30%;
   --secondary-foreground: 0 0% 100%;
@@ -193,7 +193,7 @@
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
   --input: 264 12% 88%;
-  --ring: 276 58% 20%;
+  --ring: 276 72% 14%;
 }
 
 @layer base {
