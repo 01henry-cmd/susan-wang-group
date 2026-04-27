@@ -12,8 +12,8 @@ export function Footer() {
               <img
                 src="/logo.png"
                 alt="Susan Wang Group"
-                className="h-14 w-auto object-contain"
-                style={{ maxWidth: "210px", filter: "brightness(0) invert(1)" }}
+                className="h-28 w-auto object-contain"
+                style={{ filter: "brightness(0) invert(1)" }}
               />
             </Link>
             <p className="text-white/60 text-base font-light leading-relaxed mb-10 max-w-sm">
