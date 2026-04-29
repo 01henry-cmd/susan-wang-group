@@ -101,13 +101,22 @@ export default function AboutPage() {
               >
                 <div className="space-y-8 text-lg text-foreground/80 font-light leading-relaxed">
                   <p className="first-letter:font-serif first-letter:text-6xl first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-primary">
-                    Recognizing this reality, I built the Susan Wang Group on a foundation of rigorous data analysis, uncompromising ethics, and bespoke client service. My approach is entirely advisory—I do not just sell homes; I protect capital and peace of mind.
+                    Susan Wang is a trusted real estate advisor with Coldwell Banker Realty, specializing in Orange County. Known for her calm presence, strategic mindset, and thoughtful guidance, Susan helps buyers, sellers, and investors navigate complex real estate decisions with confidence and clarity.
                   </p>
                   <p>
-                    My affiliation with Coldwell Banker Global Luxury provides my clients with unparalleled global reach and marketing prowess. Yet, my practice remains deeply personal and high-touch. When you work with me, you get my direct attention, not handed off to junior assistants.
+                    Susan approaches real estate as both a business and a relationship. She believes the best outcomes come from preparation, transparency, and truly understanding each client's goals with no pressure or one-size-fits-all advice. Whether guiding a first-time buyer, positioning a home for maximum market impact, or evaluating long-term investment opportunities, she brings a steady, consultative approach focused on long-term value.
                   </p>
                   <p>
-                    Whether you are navigating multiple offers in Irvine, seeking an off-market estate in Newport Beach, or diversifying your portfolio in Los Angeles, you deserve an advisor who anticipates challenges before they arise and negotiates with strategic intent. I analyze cap rates for investors with the same meticulous detail that I apply to staging a seller's legacy property.
+                    With a strong foundation in sales, marketing, and negotiation, Susan delivers data-driven strategies tailored to today's competitive Orange County market. Sellers benefit from strategic pricing, polished presentation, and targeted marketing designed to attract qualified buyers. Buyers and investors value her ability to simplify complex decisions, identify opportunities, and advocate decisively on their behalf.
+                  </p>
+                  <p>
+                    A graduate of University of California, Los Angeles, Susan brings a disciplined, analytical perspective to her work. Fluent in Mandarin Chinese, she effectively serves both local and international clients, bridging communication gaps and ensuring every detail is clearly understood throughout the process.
+                  </p>
+                  <p>
+                    What sets Susan apart is her balance of professionalism and intuition. Highly responsive and detail-oriented, she is committed to clear communication, integrity, and personalized service at every step. Much of her business comes from referrals and repeat clients, a reflection of the trust she builds and the care she brings to every transaction.
+                  </p>
+                  <p>
+                    If you're looking to buy, sell, or invest in Orange County, Susan offers strategic guidance, market insight, and a client-first mindset to help you move forward with confidence.
                   </p>
                 </div>
                 
