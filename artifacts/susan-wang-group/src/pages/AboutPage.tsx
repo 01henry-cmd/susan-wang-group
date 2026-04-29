@@ -78,15 +78,41 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8 }}
-                  className="sticky top-32"
+                  className=""
                 >
                   <h3 className="font-serif text-4xl md:text-5xl leading-tight font-light mb-8">
                     "Real estate is rarely just a transaction; it is a significant life transition and a cornerstone of wealth."
                   </h3>
-                  <div className="flex items-center gap-4 text-xs tracking-widest uppercase text-foreground/50 pt-8 border-t border-border">
+                  <div className="flex items-center gap-4 text-xs tracking-widest uppercase text-foreground/50 pt-8 border-t border-border mb-16">
                     <span>DRE# 02132358</span>
                     <span className="w-1 h-1 rounded-full bg-foreground/20"></span>
                     <span>Coldwell Banker</span>
+                  </div>
+
+                  <div>
+                    <h4 className="font-serif text-2xl mb-8 font-light">The Pillars of Practice</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                      <div className="flex flex-col">
+                        <TrendingUp className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
+                        <h5 className="font-serif text-xl mb-2">Data-Driven</h5>
+                        <p className="text-sm text-foreground/70 font-light leading-relaxed">Decisions backed by empirical market analytics and precise valuation modeling, removing emotion from the equation.</p>
+                      </div>
+                      <div className="flex flex-col">
+                        <Briefcase className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
+                        <h5 className="font-serif text-xl mb-2">Strategic</h5>
+                        <p className="text-sm text-foreground/70 font-light leading-relaxed">Expert negotiation focused entirely on protecting your capital and achieving the most favorable terms possible.</p>
+                      </div>
+                      <div className="flex flex-col">
+                        <Award className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
+                        <h5 className="font-serif text-xl mb-2">Excellence</h5>
+                        <p className="text-sm text-foreground/70 font-light leading-relaxed">Editorial-grade marketing and impeccable presentation standards for every property we represent.</p>
+                      </div>
+                      <div className="flex flex-col">
+                        <GraduationCap className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
+                        <h5 className="font-serif text-xl mb-2">Advisory</h5>
+                        <p className="text-sm text-foreground/70 font-light leading-relaxed">A consultative approach prioritizing long-term relationship building over single-transaction volume.</p>
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               </div>
@@ -118,32 +144,6 @@ export default function AboutPage() {
                   <p>
                     If you're looking to buy, sell, or invest in Orange County, Susan offers strategic guidance, market insight, and a client-first mindset to help you move forward with confidence.
                   </p>
-                </div>
-                
-                <div className="mt-16 pt-16 border-t border-border">
-                  <h4 className="font-serif text-2xl mb-8 font-light">The Pillars of Practice</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div className="flex flex-col">
-                      <TrendingUp className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                      <h5 className="font-serif text-xl mb-2">Data-Driven</h5>
-                      <p className="text-sm text-foreground/70 font-light leading-relaxed">Decisions backed by empirical market analytics and precise valuation modeling, removing emotion from the equation.</p>
-                    </div>
-                    <div className="flex flex-col">
-                      <Briefcase className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                      <h5 className="font-serif text-xl mb-2">Strategic</h5>
-                      <p className="text-sm text-foreground/70 font-light leading-relaxed">Expert negotiation focused entirely on protecting your capital and achieving the most favorable terms possible.</p>
-                    </div>
-                    <div className="flex flex-col">
-                      <Award className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                      <h5 className="font-serif text-xl mb-2">Excellence</h5>
-                      <p className="text-sm text-foreground/70 font-light leading-relaxed">Editorial-grade marketing and impeccable presentation standards for every property we represent.</p>
-                    </div>
-                    <div className="flex flex-col">
-                      <GraduationCap className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                      <h5 className="font-serif text-xl mb-2">Advisory</h5>
-                      <p className="text-sm text-foreground/70 font-light leading-relaxed">A consultative approach prioritizing long-term relationship building over single-transaction volume.</p>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             </div>
