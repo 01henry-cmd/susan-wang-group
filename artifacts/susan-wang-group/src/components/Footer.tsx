@@ -65,7 +65,6 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-white transition-colors">{t("footer_about")}</Link></li>
               <li><Link href="/buyers" className="hover:text-white transition-colors">{t("footer_buyers")}</Link></li>
               <li><Link href="/sellers" className="hover:text-white transition-colors">{t("footer_sellers")}</Link></li>
-              <li><Link href="/investors" className="hover:text-white transition-colors">{t("footer_investors")}</Link></li>
               <li><Link href="/communities" className="hover:text-white transition-colors">{t("footer_communities")}</Link></li>
             </ul>
           </div>

@@ -92,13 +92,6 @@ const services = [
     href: "/sellers",
     label: "Seller Representation",
   },
-  {
-    num: "03",
-    title: "For Investors",
-    body: "Analytical underwriting. We identify high-yield opportunities, analyze cap rates, and project appreciation in emerging neighborhoods to build robust portfolios.",
-    href: "/investors",
-    label: "Investment Advisory",
-  },
 ];
 
 const ease = [0.22, 1, 0.36, 1] as const;

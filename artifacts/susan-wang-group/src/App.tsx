@@ -18,7 +18,6 @@ import HomePage from "@/pages/HomePage";
 import AboutPage from "@/pages/AboutPage";
 import BuyersPage from "@/pages/BuyersPage";
 import SellersPage from "@/pages/SellersPage";
-import InvestorsPage from "@/pages/InvestorsPage";
 import CommunitiesPage from "@/pages/CommunitiesPage";
 import ListingsPage from "@/pages/ListingsPage";
 import VideosPage from "@/pages/VideosPage";
@@ -33,7 +32,6 @@ function Router() {
       <Route path="/about" component={AboutPage} />
       <Route path="/buyers" component={BuyersPage} />
       <Route path="/sellers" component={SellersPage} />
-      <Route path="/investors" component={InvestorsPage} />
       <Route path="/communities" component={CommunitiesPage} />
       <Route path="/listings" component={ListingsPage} />
       <Route path="/videos" component={VideosPage} />
