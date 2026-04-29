@@ -52,21 +52,24 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Full-width Panoramic Image */}
-        <section className="w-full">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.5 }}
-            className="w-full aspect-[21/9] md:aspect-[3/1] bg-muted relative"
-          >
-            <img 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2400&q=80" 
-              alt="Luxury interior" 
-              className="w-full h-full object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
-          </motion.div>
+        {/* Susan's Personal Portrait */}
+        <section className="w-full bg-[#fcfbf9]">
+          <div className="container mx-auto px-6 pb-0">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+              className="relative max-w-3xl mx-auto"
+            >
+              <img
+                src="/susan-wang.jpg"
+                alt="Susan Wang"
+                className="w-full object-cover object-top"
+                style={{ maxHeight: "75vh" }}
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+            </motion.div>
+          </div>
         </section>
 
         {/* Story Section */}
