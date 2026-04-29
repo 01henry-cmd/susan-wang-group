@@ -19,10 +19,10 @@ export function Footer() {
               </Link>
               <div className="w-px self-stretch bg-white/15" />
               <img
-                src="/cb-logo.webp"
+                src="/cb-logo2.png"
                 alt="Coldwell Banker Realty"
                 className="h-24 w-auto object-contain shrink-0"
-                style={{ filter: "brightness(0) invert(1)" }}
+                style={{ mixBlendMode: "screen" }}
               />
             </div>
             <p className="text-white/60 text-base font-light leading-relaxed mb-10 max-w-sm">
