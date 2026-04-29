@@ -87,8 +87,8 @@ export function Footer() {
         <div className="border-t border-white/10 pt-10 flex flex-col lg:flex-row justify-between items-start lg:items-center text-xs tracking-wider uppercase text-white/40 gap-6">
           <div className="space-y-2 font-medium">
             <p>&copy; {new Date().getFullYear()} Susan Wang Group. All rights reserved.</p>
-            <p>Susan wang | ca DRE# 02132358 
-            Coldwell Banker Realty | CA DRE # 00616212</p>
+            <p>Susan Wang | CA DRE# 02132358</p>
+            <p>Coldwell Banker Realty | CA DRE# 00616212</p>
           </div>
           <div className="flex flex-wrap gap-8 font-medium">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
