@@ -13,46 +13,61 @@ export default function AboutPage() {
       <Navigation />
       
       <main className="flex-grow">
-        {/* Editorial Hero — personal photo as full-bleed background */}
-        <section className="relative min-h-screen flex items-end pb-24 pt-40 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <img
-              src="/susan-wang.jpg"
-              alt="Susan Wang"
-              className="w-full h-full object-cover object-top"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10" />
+        {/* Editorial Header */}
+        <section className="pt-40 pb-20 bg-[#fcfbf9] overflow-hidden relative">
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-[100px] z-0"></div>
+          
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-5xl">
+              <motion.p 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-6 flex items-center"
+              >
+                <span className="w-8 h-[1px] bg-primary mr-4"></span>
+                {t("about_page_eyebrow")}
+              </motion.p>
+              
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.1 }}
+                className="font-serif text-7xl md:text-8xl lg:text-[8rem] leading-[0.9] tracking-tighter text-foreground mb-8"
+              >
+                Susan Wang
+              </motion.h1>
+              
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                className="w-full max-w-2xl border-t border-border pt-8 mt-12"
+              >
+                <p className="text-xl text-foreground/80 leading-relaxed font-light">
+                  {t("about_page_tagline")}
+                </p>
+              </motion.div>
+            </div>
           </div>
+        </section>
 
-          <div className="container mx-auto px-6 relative z-10 text-white">
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-6 flex items-center"
-            >
-              <span className="w-8 h-[1px] bg-primary mr-4"></span>
-              {t("about_page_eyebrow")}
-            </motion.p>
-
-            <motion.h1
+        {/* Susan's Personal Portrait */}
+        <section className="w-full bg-[#fcfbf9]">
+          <div className="container mx-auto px-6 pb-0">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.1 }}
-              className="font-serif text-7xl md:text-8xl lg:text-[8rem] leading-[0.9] tracking-tighter mb-8"
+              transition={{ duration: 1.2, delay: 0.5 }}
+              className="relative max-w-3xl mx-auto"
             >
-              Susan Wang
-            </motion.h1>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="w-full max-w-2xl border-t border-white/20 pt-8 mt-12"
-            >
-              <p className="text-xl text-white/80 leading-relaxed font-light">
-                {t("about_page_tagline")}
-              </p>
+              <img
+                src="/susan-wang.jpg"
+                alt="Susan Wang"
+                className="w-full object-cover object-top"
+                style={{ maxHeight: "75vh" }}
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
             </motion.div>
           </div>
         </section>
