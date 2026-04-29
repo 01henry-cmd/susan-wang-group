@@ -74,10 +74,10 @@ export function Footer() {
                 <a href="tel:+17148182511" className="hover:text-white transition-colors text-lg">(714) 818-2511</a>
               </li>
               <li className="flex items-start">
-                <a href="mailto:susan@susanwanggroup.com" className="hover:text-white transition-colors text-lg">susan@susanwanggroup.com</a>
+                <a href="mailto:Susan.wang@cbrealty.com" className="hover:text-white transition-colors text-lg">Susan.wang@cbrealty.com</a>
               </li>
               <li className="flex items-start pt-4 border-t border-white/10">
-                <span className="leading-relaxed">Coldwell Banker Realty<br/>Newport Beach, CA</span>
+                <span className="leading-relaxed">840 Newport Center Dr, Ste 100<br/>Newport Beach, CA 92660</span>
               </li>
             </ul>
           </div>

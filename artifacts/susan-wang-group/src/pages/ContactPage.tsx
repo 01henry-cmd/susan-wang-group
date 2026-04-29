@@ -101,7 +101,7 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5 text-primary shrink-0 mr-6 mt-1" strokeWidth={1.5} />
                     <div>
                       <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-foreground/50 mb-2">Email</h4>
-                      <a href="mailto:susan@susanwanggroup.com" className="text-xl font-light hover:text-primary transition-colors border-b border-transparent group-hover:border-primary pb-1">susan@susanwanggroup.com</a>
+                      <a href="mailto:Susan.wang@cbrealty.com" className="text-xl font-light hover:text-primary transition-colors border-b border-transparent group-hover:border-primary pb-1">Susan.wang@cbrealty.com</a>
                     </div>
                   </div>
                   
@@ -109,7 +109,7 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5 text-primary shrink-0 mr-6 mt-1" strokeWidth={1.5} />
                     <div>
                       <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-foreground/50 mb-2">Office</h4>
-                      <p className="text-lg font-light leading-relaxed">Coldwell Banker Realty<br/>Newport Beach, CA</p>
+                      <p className="text-lg font-light leading-relaxed">840 Newport Center Dr, Ste 100<br/>Newport Beach, CA 92660</p>
                     </div>
                   </div>
                   
