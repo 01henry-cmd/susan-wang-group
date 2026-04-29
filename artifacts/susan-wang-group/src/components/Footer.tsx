@@ -19,7 +19,7 @@ export function Footer() {
               </Link>
               <div className="w-px self-stretch bg-white/15" />
               <img
-                src="/cb-logo.png"
+                src="/cb-logo.webp"
                 alt="Coldwell Banker Realty"
                 className="h-24 w-auto object-contain shrink-0"
                 style={{ filter: "brightness(0) invert(1)" }}
