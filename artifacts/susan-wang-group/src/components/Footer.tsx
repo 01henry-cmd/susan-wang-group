@@ -18,12 +18,14 @@ export function Footer() {
                 />
               </Link>
               <div className="w-px self-stretch bg-white/15" />
-              <img
-                src="/cb-logo2.png"
-                alt="Coldwell Banker Realty"
-                className="h-24 w-auto object-contain shrink-0"
-                style={{ mixBlendMode: "screen" }}
-              />
+              <div className="h-28 w-28 overflow-hidden shrink-0 flex items-center justify-center">
+                <img
+                  src="/cb-logo2.png"
+                  alt="Coldwell Banker Realty"
+                  className="w-full h-full object-contain"
+                  style={{ mixBlendMode: "screen", transform: "scale(1.75)", transformOrigin: "center" }}
+                />
+              </div>
             </div>
             <p className="text-white/60 text-base font-light leading-relaxed mb-10 max-w-sm">
               Helping clients buy, sell & invest with strategy and clarity in Orange County and Los Angeles.
