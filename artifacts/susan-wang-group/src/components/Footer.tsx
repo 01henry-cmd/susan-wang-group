@@ -94,6 +94,12 @@ export function Footer() {
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
+
+        <div className="border-t border-white/8 mt-8 pt-8">
+          <p className="text-[10px] leading-relaxed text-white/28 font-light tracking-wide">
+            The property information herein is derived from various sources that may include, but not be limited to, county records and the Multiple Listing Service, and it may include approximations. Although the information is believed to be accurate, it is not warranted and you should not rely upon it without personal verification. Affiliated real estate agents are independent contractor sales associates, not employees. ©2026 Coldwell Banker. All Rights Reserved. Coldwell Banker and the Coldwell Banker logo are trademarks of Coldwell Banker Real Estate LLC. The Coldwell Banker® System is comprised of company owned offices which are owned by a subsidiary of Anywhere Advisors LLC and franchised offices which are independently owned and operated. The Coldwell Banker System fully supports the principles of the Fair Housing Act and the Equal Opportunity Act.
+          </p>
+        </div>
       </div>
     </footer>
   );
