@@ -25,7 +25,6 @@ export function Navigation() {
     { name: "Areas", path: "/communities" },
     { name: "Listings", path: "/listings" },
     { name: "Videos", path: "/videos" },
-    { name: "Testimonials", path: "/testimonials" },
   ];
 
   return (
