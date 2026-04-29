@@ -3,8 +3,11 @@ import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
 import { motion } from "framer-motion";
 import { Award, Briefcase, GraduationCap, TrendingUp } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AboutPage() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
@@ -23,7 +26,7 @@ export default function AboutPage() {
                 className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-6 flex items-center"
               >
                 <span className="w-8 h-[1px] bg-primary mr-4"></span>
-                The Principal
+                {t("about_page_eyebrow")}
               </motion.p>
               
               <motion.h1 
@@ -42,7 +45,7 @@ export default function AboutPage() {
                 className="w-full max-w-2xl border-t border-border pt-8 mt-12"
               >
                 <p className="text-xl text-foreground/80 leading-relaxed font-light">
-                  A strategic advisor dedicated to bringing clarity, precision, and extraordinary results to the Southern California luxury real estate market.
+                  {t("about_page_tagline")}
                 </p>
               </motion.div>
             </div>
@@ -71,17 +74,16 @@ export default function AboutPage() {
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start max-w-7xl mx-auto">
               
-              {/* Left Column - Large Callout */}
+              {/* Left Column */}
               <div className="lg:col-span-5">
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8 }}
-                  className=""
                 >
                   <h3 className="font-serif text-4xl md:text-5xl leading-tight font-light mb-8">
-                    "Real estate is rarely just a transaction; it is a significant life transition and a cornerstone of wealth."
+                    "{t("about_quote")}"
                   </h3>
                   <div className="flex items-center gap-4 text-xs tracking-widest uppercase text-foreground/50 pt-8 border-t border-border mb-16">
                     <span>DRE# 02132358</span>
@@ -90,27 +92,27 @@ export default function AboutPage() {
                   </div>
 
                   <div>
-                    <h4 className="font-serif text-2xl mb-8 font-light">The Pillars of Practice</h4>
+                    <h4 className="font-serif text-2xl mb-8 font-light">{t("about_pillars_title")}</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                       <div className="flex flex-col">
                         <TrendingUp className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                        <h5 className="font-serif text-xl mb-2">Data-Driven</h5>
-                        <p className="text-sm text-foreground/70 font-light leading-relaxed">Decisions backed by empirical market analytics and precise valuation modeling, removing emotion from the equation.</p>
+                        <h5 className="font-serif text-xl mb-2">{t("about_pillar1_title")}</h5>
+                        <p className="text-sm text-foreground/70 font-light leading-relaxed">{t("about_pillar1_body")}</p>
                       </div>
                       <div className="flex flex-col">
                         <Briefcase className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                        <h5 className="font-serif text-xl mb-2">Strategic</h5>
-                        <p className="text-sm text-foreground/70 font-light leading-relaxed">Expert negotiation focused entirely on protecting your capital and achieving the most favorable terms possible.</p>
+                        <h5 className="font-serif text-xl mb-2">{t("about_pillar2_title")}</h5>
+                        <p className="text-sm text-foreground/70 font-light leading-relaxed">{t("about_pillar2_body")}</p>
                       </div>
                       <div className="flex flex-col">
                         <Award className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                        <h5 className="font-serif text-xl mb-2">Excellence</h5>
-                        <p className="text-sm text-foreground/70 font-light leading-relaxed">Editorial-grade marketing and impeccable presentation standards for every property we represent.</p>
+                        <h5 className="font-serif text-xl mb-2">{t("about_pillar3_title")}</h5>
+                        <p className="text-sm text-foreground/70 font-light leading-relaxed">{t("about_pillar3_body")}</p>
                       </div>
                       <div className="flex flex-col">
                         <GraduationCap className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                        <h5 className="font-serif text-xl mb-2">Advisory</h5>
-                        <p className="text-sm text-foreground/70 font-light leading-relaxed">A consultative approach prioritizing long-term relationship building over single-transaction volume.</p>
+                        <h5 className="font-serif text-xl mb-2">{t("about_pillar4_title")}</h5>
+                        <p className="text-sm text-foreground/70 font-light leading-relaxed">{t("about_pillar4_body")}</p>
                       </div>
                     </div>
                   </div>
@@ -127,23 +129,13 @@ export default function AboutPage() {
               >
                 <div className="space-y-8 text-lg text-foreground/80 font-light leading-relaxed">
                   <p className="first-letter:font-serif first-letter:text-6xl first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-primary">
-                    Susan Wang is a trusted real estate advisor with Coldwell Banker Realty, specializing in Orange County. Known for her calm presence, strategic mindset, and thoughtful guidance, Susan helps buyers, sellers, and investors navigate complex real estate decisions with confidence and clarity.
+                    {t("about_bio1")}
                   </p>
-                  <p>
-                    Susan approaches real estate as both a business and a relationship. She believes the best outcomes come from preparation, transparency, and truly understanding each client's goals with no pressure or one-size-fits-all advice. Whether guiding a first-time buyer, positioning a home for maximum market impact, or evaluating long-term investment opportunities, she brings a steady, consultative approach focused on long-term value.
-                  </p>
-                  <p>
-                    With a strong foundation in sales, marketing, and negotiation, Susan delivers data-driven strategies tailored to today's competitive Orange County market. Sellers benefit from strategic pricing, polished presentation, and targeted marketing designed to attract qualified buyers. Buyers and investors value her ability to simplify complex decisions, identify opportunities, and advocate decisively on their behalf.
-                  </p>
-                  <p>
-                    A graduate of University of California, Los Angeles, Susan brings a disciplined, analytical perspective to her work. Fluent in Mandarin Chinese, she effectively serves both local and international clients, bridging communication gaps and ensuring every detail is clearly understood throughout the process.
-                  </p>
-                  <p>
-                    What sets Susan apart is her balance of professionalism and intuition. Highly responsive and detail-oriented, she is committed to clear communication, integrity, and personalized service at every step. Much of her business comes from referrals and repeat clients, a reflection of the trust she builds and the care she brings to every transaction.
-                  </p>
-                  <p>
-                    If you're looking to buy, sell, or invest in Orange County, Susan offers strategic guidance, market insight, and a client-first mindset to help you move forward with confidence.
-                  </p>
+                  <p>{t("about_bio2")}</p>
+                  <p>{t("about_bio3")}</p>
+                  <p>{t("about_bio4")}</p>
+                  <p>{t("about_bio5")}</p>
+                  <p>{t("about_bio6")}</p>
                 </div>
               </motion.div>
             </div>
@@ -153,11 +145,11 @@ export default function AboutPage() {
         {/* CTA */}
         <section className="py-32 bg-[#ebe8e2] text-center">
           <div className="container mx-auto px-6">
-            <h2 className="font-serif text-4xl md:text-5xl mb-8 font-light">Discuss Your Real Estate Goals</h2>
+            <h2 className="font-serif text-4xl md:text-5xl mb-8 font-light">{t("about_cta_h2")}</h2>
             <p className="text-foreground/70 mb-10 max-w-md mx-auto font-light text-lg">
-              Take the first step toward a more strategic real estate acquisition or sale.
+              {t("about_cta_sub")}
             </p>
-            <CTAButton href="/contact">Schedule a Consultation</CTAButton>
+            <CTAButton href="/contact">{t("about_cta_btn")}</CTAButton>
           </div>
         </section>
       </main>

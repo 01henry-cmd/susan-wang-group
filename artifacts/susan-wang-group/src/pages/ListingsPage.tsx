@@ -3,8 +3,11 @@ import { Footer } from "@/components/Footer";
 import { ListingCard } from "@/components/ListingCard";
 import { Search, SlidersHorizontal } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ListingsPage() {
+  const { t } = useLanguage();
+
   const listings = [
     {
       image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1000&q=80",
@@ -86,47 +89,47 @@ export default function ListingsPage() {
                 <div>
                   <p className="text-primary text-xs tracking-[0.2em] uppercase font-medium mb-4 flex items-center">
                     <span className="w-4 h-[1px] bg-primary mr-3"></span>
-                    Portfolio
+                    {t("listings_page_eyebrow")}
                   </p>
-                  <h1 className="font-serif text-4xl md:text-6xl font-light tracking-tight">Exclusive Properties</h1>
+                  <h1 className="font-serif text-4xl md:text-6xl font-light tracking-tight">{t("listings_page_h1")}</h1>
                 </div>
               </div>
               
-              {/* Refined Filter Bar */}
+              {/* Filter Bar */}
               <div className="flex flex-col lg:flex-row gap-4 pb-8 border-b border-border">
                 <div className="relative flex-grow group">
                   <Search className="absolute left-0 top-1/2 -translate-y-1/2 text-foreground/40 w-5 h-5 transition-colors group-focus-within:text-primary" strokeWidth={1.5} />
                   <input 
                     type="text" 
-                    placeholder="Search by city, neighborhood, or zip..." 
+                    placeholder={t("listings_search_placeholder")}
                     className="w-full pl-8 pr-4 py-3 bg-transparent border-b border-border focus:outline-none focus:border-foreground transition-colors text-lg font-light placeholder:text-foreground/40"
                   />
                 </div>
                 <div className="flex gap-4 lg:w-[400px]">
                   <select className="flex-1 pb-3 pt-3 bg-transparent border-b border-border focus:outline-none focus:border-foreground transition-colors text-sm uppercase tracking-wider font-medium appearance-none cursor-pointer">
-                    <option>Price (Any)</option>
+                    <option>{t("listings_price_any")}</option>
                     <option>$1M - $2M</option>
                     <option>$2M - $5M</option>
                     <option>$5M+</option>
                   </select>
                   <select className="w-24 pb-3 pt-3 bg-transparent border-b border-border focus:outline-none focus:border-foreground transition-colors text-sm uppercase tracking-wider font-medium appearance-none cursor-pointer">
-                    <option>Beds</option>
+                    <option>{t("listings_beds")}</option>
                     <option>3+</option>
                     <option>4+</option>
                     <option>5+</option>
                   </select>
                   <button className="flex items-center justify-center text-xs uppercase tracking-widest font-medium border-b border-transparent hover:border-foreground transition-colors px-2 pb-3 pt-3">
                     <SlidersHorizontal className="w-4 h-4 mr-2" strokeWidth={1.5} />
-                    Filters
+                    {t("listings_filters")}
                   </button>
                 </div>
               </div>
             </motion.div>
 
-            {/* Note about IDX */}
+            {/* IDX Note */}
             <div className="mb-16 text-xs tracking-widest uppercase text-foreground/50 flex items-center">
               <div className="w-1.5 h-1.5 bg-primary mr-3" />
-              Viewing featured portfolio. Full MLS/IDX integration coming soon.
+              {t("listings_idx_note")}
             </div>
 
             {/* Grid */}
@@ -140,7 +143,7 @@ export default function ListingsPage() {
             
             <div className="mt-32 flex justify-center">
               <button className="text-xs uppercase tracking-[0.2em] font-medium border border-foreground px-8 py-4 hover:bg-foreground hover:text-white transition-colors">
-                Load More Properties
+                {t("listings_load_more")}
               </button>
             </div>
           </div>

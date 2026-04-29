@@ -1,10 +1,12 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { CTAButton } from "@/components/CTAButton";
 import { motion } from "framer-motion";
 import { Camera, LineChart, Shield, Megaphone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function SellersPage() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
@@ -18,7 +20,6 @@ export default function SellersPage() {
               alt="Luxury property exterior twilight" 
               className="w-full h-full object-cover object-center"
             />
-            {/* Dark warm overlay */}
             <div className="absolute inset-0 bg-[#2a1f18]/70 mix-blend-multiply" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
           </div>
@@ -32,13 +33,13 @@ export default function SellersPage() {
             >
               <div className="flex items-center text-primary text-xs tracking-[0.3em] uppercase font-medium mb-6">
                 <div className="w-8 h-[1px] bg-primary mr-4"></div>
-                Seller Representation
+                {t("sellers_eyebrow")}
               </div>
               <h1 className="font-serif text-5xl md:text-7xl mb-6 font-light tracking-tight leading-[1.1]">
-                Maximizing Your Returns.
+                {t("sellers_h1")}
               </h1>
               <p className="text-xl text-white/80 leading-relaxed font-light max-w-2xl border-l border-white/20 pl-6 ml-2">
-                We treat your property not merely as a listing, but as an asset requiring sophisticated positioning, editorial-grade marketing, and aggressive negotiation.
+                {t("sellers_hero_sub")}
               </p>
             </motion.div>
           </div>
@@ -56,10 +57,10 @@ export default function SellersPage() {
                 transition={{ duration: 0.8 }}
                 className="lg:col-span-6 lg:pr-12"
               >
-                <p className="text-primary text-xs tracking-[0.2em] uppercase font-medium mb-6">The Standard</p>
-                <h2 className="font-serif text-4xl md:text-5xl mb-8 font-light tracking-tight leading-tight">Editorial-Grade Presentation</h2>
+                <p className="text-primary text-xs tracking-[0.2em] uppercase font-medium mb-6">{t("sellers_std_eyebrow")}</p>
+                <h2 className="font-serif text-4xl md:text-5xl mb-8 font-light tracking-tight leading-tight">{t("sellers_std_h2")}</h2>
                 <p className="text-foreground/70 mb-12 font-light text-lg leading-relaxed">
-                  In the luxury sector, the first showing happens online. A property's digital footprint dictates its perceived value. We invest heavily upfront to ensure your home commands attention and justifies premium pricing.
+                  {t("sellers_std_body")}
                 </p>
                 
                 <div className="space-y-10">
@@ -68,8 +69,8 @@ export default function SellersPage() {
                       <Camera className="w-5 h-5 text-primary" strokeWidth={1.5} />
                     </div>
                     <div>
-                      <h4 className="font-serif text-2xl mb-2 font-light">Visual Asset Creation</h4>
-                      <p className="text-foreground/70 font-light leading-relaxed">Twilight photography, cinematic video tours, and aerial drone footage capture the lifestyle, not just the structure.</p>
+                      <h4 className="font-serif text-2xl mb-2 font-light">{t("sellers_visual_title")}</h4>
+                      <p className="text-foreground/70 font-light leading-relaxed">{t("sellers_visual_body")}</p>
                     </div>
                   </div>
                   
@@ -78,8 +79,8 @@ export default function SellersPage() {
                       <Megaphone className="w-5 h-5 text-primary" strokeWidth={1.5} />
                     </div>
                     <div>
-                      <h4 className="font-serif text-2xl mb-2 font-light">Global Reach</h4>
-                      <p className="text-foreground/70 font-light leading-relaxed">Syndication across Coldwell Banker Global Luxury networks, Wall Street Journal, Mansion Global, and targeted digital campaigns.</p>
+                      <h4 className="font-serif text-2xl mb-2 font-light">{t("sellers_reach_title")}</h4>
+                      <p className="text-foreground/70 font-light leading-relaxed">{t("sellers_reach_body")}</p>
                     </div>
                   </div>
                   
@@ -88,8 +89,8 @@ export default function SellersPage() {
                       <Shield className="w-5 h-5 text-primary" strokeWidth={1.5} />
                     </div>
                     <div>
-                      <h4 className="font-serif text-2xl mb-2 font-light">Curated Staging</h4>
-                      <p className="text-foreground/70 font-light leading-relaxed">Collaborating with top interior designers to optimize spatial flow and elevate the aesthetic appeal to target demographics.</p>
+                      <h4 className="font-serif text-2xl mb-2 font-light">{t("sellers_staging_title")}</h4>
+                      <p className="text-foreground/70 font-light leading-relaxed">{t("sellers_staging_body")}</p>
                     </div>
                   </div>
                 </div>
@@ -109,25 +110,25 @@ export default function SellersPage() {
         {/* Strategy / Valuation CTA */}
         <section className="py-32 bg-[#1a1a1a] text-white text-center">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="font-serif text-4xl md:text-5xl font-light tracking-tight mb-8">The Art of Pricing & Negotiation</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-light tracking-tight mb-8">{t("sellers_price_h2")}</h2>
             <p className="text-xl text-white/70 font-light leading-relaxed mb-16 max-w-3xl mx-auto">
-              Overpricing leads to stagnation; underpricing leaves capital on the table. We utilize advanced predictive analytics to establish a pricing strategy that drives urgency. Once offers arrive, our protocol maximizes your net proceeds while mitigating risk.
+              {t("sellers_price_body")}
             </p>
             
             <div className="bg-white/5 border border-white/10 p-10 md:p-16 backdrop-blur-sm text-left">
               <LineChart className="w-10 h-10 text-primary mb-8" strokeWidth={1} />
-              <h3 className="font-serif text-3xl mb-4 font-light">Request a Valuation Model</h3>
+              <h3 className="font-serif text-3xl mb-4 font-light">{t("sellers_val_h3")}</h3>
               <p className="text-white/60 font-light mb-8 text-lg">
-                Discover the true market value of your property. We provide a comprehensive, data-driven comparative analysis, not an automated algorithm.
+                {t("sellers_val_body")}
               </p>
               <form className="flex flex-col sm:flex-row gap-4">
                 <input 
                   type="text" 
-                  placeholder="Enter your property address" 
+                  placeholder={t("sellers_val_placeholder")}
                   className="flex-grow px-6 py-4 bg-black/50 border border-white/20 focus:outline-none focus:border-primary text-white placeholder:text-white/30"
                 />
                 <button className="bg-primary text-primary-foreground px-8 py-4 uppercase tracking-[0.15em] text-sm font-medium hover:bg-primary/90 transition-colors">
-                  Request Report
+                  {t("sellers_val_btn")}
                 </button>
               </form>
             </div>
@@ -138,16 +139,16 @@ export default function SellersPage() {
         <section className="py-32 bg-white">
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="mb-20">
-              <p className="text-primary text-xs tracking-[0.2em] uppercase font-medium mb-4">Timeline</p>
-              <h2 className="font-serif text-4xl md:text-5xl font-light tracking-tight">Preparation to Close</h2>
+              <p className="text-primary text-xs tracking-[0.2em] uppercase font-medium mb-4">{t("sellers_timeline_eyebrow")}</p>
+              <h2 className="font-serif text-4xl md:text-5xl font-light tracking-tight">{t("sellers_timeline_h2")}</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16">
               {[
-                { step: "01", title: "Strategic Preparation", desc: "We identify high-ROI improvements, arrange staging, and handle pre-inspections to eliminate buyer objections before they ever arise." },
-                { step: "02", title: "Market Launch", desc: "A coordinated debut leveraging private networks, digital platforms, and exclusive broker previews to generate immediate momentum." },
-                { step: "03", title: "Offer Management", desc: "Vetting buyer qualifications, analyzing offer terms, and leveraging multiple bids to improve price and conditions." },
-                { step: "04", title: "Escrow & Closing", desc: "Navigating contingencies, appraisals, and the final walk-through with meticulous attention to detail to ensure a seamless close." }
+                { step: "01", title: t("sellers_step1_title"), desc: t("sellers_step1_desc") },
+                { step: "02", title: t("sellers_step2_title"), desc: t("sellers_step2_desc") },
+                { step: "03", title: t("sellers_step3_title"), desc: t("sellers_step3_desc") },
+                { step: "04", title: t("sellers_step4_title"), desc: t("sellers_step4_desc") },
               ].map((item, i) => (
                 <div key={i} className="flex flex-col">
                   <div className="font-serif text-5xl text-foreground/10 mb-4 font-light">{item.step}</div>

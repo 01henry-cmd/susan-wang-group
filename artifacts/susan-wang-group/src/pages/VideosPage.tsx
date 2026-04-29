@@ -2,8 +2,11 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { VideoCard } from "@/components/VideoCard";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function VideosPage() {
+  const { t } = useLanguage();
+
   const videos = [
     {
       title: "Q3 Orange County Market Update",
@@ -59,12 +62,12 @@ export default function VideosPage() {
             >
               <p className="text-primary text-xs tracking-[0.2em] uppercase font-medium mb-4 flex items-center">
                 <span className="w-4 h-[1px] bg-primary mr-3"></span>
-                Video Library
+                {t("videos_eyebrow")}
               </p>
-              <h1 className="font-serif text-4xl md:text-6xl font-light tracking-tight">Insights & Tours</h1>
+              <h1 className="font-serif text-4xl md:text-6xl font-light tracking-tight">{t("videos_h1")}</h1>
             </motion.div>
             
-            {/* Featured Video - Editorial Treatment */}
+            {/* Featured Video */}
             <div className="mb-32">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
                 <div className="lg:col-span-8">
@@ -77,18 +80,17 @@ export default function VideosPage() {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                       allowFullScreen
                     ></iframe>
-                    {/* Fake frame/border for editorial feel */}
                     <div className="absolute inset-0 border border-white/10 pointer-events-none mix-blend-overlay"></div>
                   </div>
                 </div>
                 <div className="lg:col-span-4 flex flex-col justify-center">
-                  <p className="text-primary text-[10px] uppercase tracking-[0.2em] font-medium mb-4">Featured Perspective</p>
-                  <h2 className="font-serif text-4xl lg:text-5xl mb-6 font-light tracking-tight leading-tight">The 2024 Luxury Real Estate Forecast</h2>
-                  <p className="text-foreground/70 font-light text-lg leading-relaxed mb-8">An in-depth analysis of what buyers and sellers can expect in the Southern California premium markets over the next 12 months.</p>
+                  <p className="text-primary text-[10px] uppercase tracking-[0.2em] font-medium mb-4">{t("videos_featured_eyebrow")}</p>
+                  <h2 className="font-serif text-4xl lg:text-5xl mb-6 font-light tracking-tight leading-tight">{t("videos_featured_title")}</h2>
+                  <p className="text-foreground/70 font-light text-lg leading-relaxed mb-8">{t("videos_featured_desc")}</p>
                   <div className="flex items-center gap-4 text-xs tracking-widest uppercase font-medium">
                     <span className="text-foreground/50">12:45</span>
                     <div className="w-[1px] h-3 bg-border"></div>
-                    <button className="border-b border-foreground pb-1 hover:text-primary hover:border-primary transition-colors">Watch Full Video</button>
+                    <button className="border-b border-foreground pb-1 hover:text-primary hover:border-primary transition-colors">{t("videos_watch")}</button>
                   </div>
                 </div>
               </div>
@@ -96,12 +98,12 @@ export default function VideosPage() {
 
             {/* Video Grid */}
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-12 border-b border-border pb-6 gap-6">
-              <h3 className="font-serif text-3xl font-light tracking-tight">Recent Videos</h3>
+              <h3 className="font-serif text-3xl font-light tracking-tight">{t("videos_recent")}</h3>
               <div className="flex flex-wrap gap-x-8 gap-y-4 text-xs tracking-widest uppercase font-medium text-foreground/50">
-                <button className="text-foreground border-b border-foreground pb-1">All</button>
-                <button className="hover:text-foreground transition-colors">Tours</button>
-                <button className="hover:text-foreground transition-colors">Education</button>
-                <button className="hover:text-foreground transition-colors">Market</button>
+                <button className="text-foreground border-b border-foreground pb-1">{t("videos_all")}</button>
+                <button className="hover:text-foreground transition-colors">{t("videos_tours")}</button>
+                <button className="hover:text-foreground transition-colors">{t("videos_education")}</button>
+                <button className="hover:text-foreground transition-colors">{t("videos_market")}</button>
               </div>
             </div>
 
@@ -113,7 +115,7 @@ export default function VideosPage() {
             
             <div className="mt-24 flex justify-center">
               <button className="text-xs uppercase tracking-[0.2em] font-medium border border-foreground px-8 py-4 hover:bg-foreground hover:text-white transition-colors">
-                Load More
+                {t("videos_load_more")}
               </button>
             </div>
           </div>
