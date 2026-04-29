@@ -75,26 +75,6 @@ const communities = [
   },
 ];
 
-const testimonials = [
-  {
-    quote: "Susan's strategic approach to pricing resulted in multiple offers above asking within days. Her professionalism is unmatched.",
-    name: "The Reynolds Family",
-    location: "Irvine",
-    type: "Sellers",
-  },
-  {
-    quote: "As first-time luxury buyers, Susan provided clarity, data, and immense patience throughout the entire process.",
-    name: "Dr. James & Emily T.",
-    location: "Newport Beach",
-    type: "Buyers",
-  },
-  {
-    quote: "She identified an off-market opportunity we never would have found alone. Her market knowledge is truly exceptional.",
-    name: "Marcus L.",
-    location: "Los Angeles",
-    type: "Investor",
-  },
-];
 
 const services = [
   {
