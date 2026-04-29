@@ -8,14 +8,23 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 mb-24">
           
           <div className="col-span-1 md:col-span-2 lg:col-span-4">
-            <Link href="/" className="cursor-pointer block mb-8 max-w-fit">
+            <div className="flex items-center gap-6 mb-8">
+              <Link href="/" className="cursor-pointer shrink-0">
+                <img
+                  src="/logo.png"
+                  alt="Susan Wang Group"
+                  className="h-28 w-auto object-contain"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                />
+              </Link>
+              <div className="w-px self-stretch bg-white/15" />
               <img
-                src="/logo.png"
-                alt="Susan Wang Group"
-                className="h-28 w-auto object-contain"
+                src="/cb-logo.png"
+                alt="Coldwell Banker Realty"
+                className="h-24 w-auto object-contain shrink-0"
                 style={{ filter: "brightness(0) invert(1)" }}
               />
-            </Link>
+            </div>
             <p className="text-white/60 text-base font-light leading-relaxed mb-10 max-w-sm">
               Helping clients buy, sell & invest with strategy and clarity in Orange County and Los Angeles.
             </p>
