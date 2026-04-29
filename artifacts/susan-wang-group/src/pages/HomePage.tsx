@@ -6,6 +6,7 @@ import { CommunityCard } from "@/components/CommunityCard";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { useRef, useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const heroImages = [
   "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1400&q=85",
@@ -100,14 +101,14 @@ const services = [
   },
 ];
 
-const heroLines = ["Elevated", "Real Estate", "in Southern", "California."];
-
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function HomePage() {
+  const { t } = useLanguage();
   const heroRef = useRef<HTMLElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const [heroIdx, setHeroIdx] = useState(0);
+  const heroLines = [t("hero_line1"), t("hero_line2"), t("hero_line3"), t("hero_line4")];
 
   useEffect(() => {
     const id = setInterval(() => setHeroIdx(i => (i + 1) % heroImages.length), 6000);
@@ -205,7 +206,7 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.85, ease }}
                 className="text-base text-white/65 font-light leading-relaxed max-w-md mb-12"
               >
-                Helping discerning clients buy, sell, and invest with strategy and clarity across Orange County and Los Angeles.
+                {t("hero_sub")}
               </motion.p>
 
               <motion.div
@@ -214,9 +215,9 @@ export default function HomePage() {
                 transition={{ duration: 0.7, delay: 1.0, ease }}
                 className="flex flex-col sm:flex-row items-start gap-6"
               >
-                <CTAButton href="/contact">Book a Consultation</CTAButton>
+                <CTAButton href="/contact">{t("hero_cta")}</CTAButton>
                 <Link href="/listings" className="group inline-flex items-center text-[11px] tracking-[0.2em] uppercase text-white/50 hover:text-white transition-colors duration-300 mt-4 sm:mt-3">
-                  <span className="border-b border-white/20 pb-0.5 group-hover:border-white/55 transition-colors">View Portfolio</span>
+                  <span className="border-b border-white/20 pb-0.5 group-hover:border-white/55 transition-colors">{t("hero_portfolio")}</span>
                 </Link>
               </motion.div>
             </div>
@@ -336,7 +337,7 @@ export default function HomePage() {
                     transition={{ duration: 0.6, delay: 0.1, ease }}
                     className="w-4 h-px bg-primary origin-left inline-block"
                   />
-                  Principal Advisor
+                  {t("about_eyebrow")}
                 </motion.p>
 
                 <motion.h2
@@ -347,7 +348,7 @@ export default function HomePage() {
                   className="font-serif font-light tracking-tight text-foreground leading-[1.1] mb-8"
                   style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)" }}
                 >
-                  Strategy meets clarity in luxury real estate.
+                  {t("about_tagline")}
                 </motion.h2>
 
                 <motion.div
@@ -371,7 +372,7 @@ export default function HomePage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3, ease }}
                 >
-                  <CTAButton href="/about" variant="outline">Read My Story</CTAButton>
+                  <CTAButton href="/about" variant="outline">{t("about_cta")}</CTAButton>
                 </motion.div>
               </div>
 
@@ -398,15 +399,15 @@ export default function HomePage() {
                     transition={{ duration: 0.55, ease }}
                     className="w-4 h-px bg-primary origin-left inline-block"
                   />
-                  Portfolio
+                  {t("listings_eyebrow")}
                 </p>
                 <h2 className="font-serif font-light tracking-tight text-foreground"
                   style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
-                  Exclusive Properties
+                  {t("listings_title")}
                 </h2>
               </div>
               <Link href="/listings" className="group text-[10px] tracking-[0.22em] uppercase text-foreground/45 hover:text-foreground transition-colors duration-300 flex items-center gap-2 shrink-0">
-                <span className="border-b border-foreground/18 group-hover:border-foreground/50 pb-0.5 transition-colors">View All Properties</span>
+                <span className="border-b border-foreground/18 group-hover:border-foreground/50 pb-0.5 transition-colors">{t("listings_cta")}</span>
               </Link>
             </motion.div>
 
@@ -444,7 +445,7 @@ export default function HomePage() {
                   transition={{ duration: 0.55, ease }}
                   className="w-4 h-px bg-primary origin-left inline-block"
                 />
-                How We Work
+                {t("services_eyebrow")}
                 <motion.span
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
@@ -455,7 +456,7 @@ export default function HomePage() {
               </p>
               <h2 className="font-serif font-light tracking-tight text-foreground"
                 style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
-                A Tailored Approach
+                {t("services_title")}
               </h2>
             </motion.div>
 
@@ -513,11 +514,11 @@ export default function HomePage() {
                   transition={{ duration: 0.55, ease }}
                   className="w-4 h-px bg-primary origin-left inline-block"
                 />
-                Southern California
+                {t("communities_eyebrow")}
               </p>
               <h2 className="font-serif font-light tracking-tight text-foreground"
                 style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
-                Curated Communities
+                {t("communities_title")}
               </h2>
             </motion.div>
 
@@ -569,7 +570,7 @@ export default function HomePage() {
                 transition={{ duration: 0.5, ease }}
                 className="w-4 h-px bg-primary origin-left inline-block"
               />
-              Begin The Conversation
+              {t("cta_eyebrow")}
               <motion.span
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
@@ -584,10 +585,10 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1, ease }}
-              className="font-serif font-light tracking-tight text-foreground mb-6 leading-[1.1]"
+              className="font-serif font-light tracking-tight text-foreground mb-6 leading-[1.1] whitespace-pre-line"
               style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)" }}
             >
-              Ready to elevate your real estate experience?
+              {t("cta_title")}
             </motion.h2>
 
             <motion.p
@@ -597,7 +598,7 @@ export default function HomePage() {
               transition={{ duration: 0.7, delay: 0.2, ease }}
               className="text-foreground/52 font-light leading-relaxed mb-12 max-w-xl mx-auto"
             >
-              Schedule a private consultation to discuss your goals, market opportunities, and how strategic guidance can transform your next move.
+              {t("cta_sub")}
             </motion.p>
 
             <motion.div
@@ -606,7 +607,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3, ease }}
             >
-              <CTAButton href="/contact">Book Your Consultation</CTAButton>
+              <CTAButton href="/contact">{t("cta_button")}</CTAButton>
             </motion.div>
           </div>
         </section>

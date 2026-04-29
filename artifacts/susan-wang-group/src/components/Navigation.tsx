@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Navigation() {
   const [location] = useLocation();
@@ -9,6 +10,7 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isHome = location === "/";
   const transparent = isHome && !isScrolled;
+  const { lang, setLang, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 60);
@@ -18,13 +20,13 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
-    { name: "About", path: "/about" },
-    { name: "Buyers", path: "/buyers" },
-    { name: "Sellers", path: "/sellers" },
-    { name: "Investors", path: "/investors" },
-    { name: "Areas", path: "/communities" },
-    { name: "Listings", path: "/listings" },
-    { name: "Videos", path: "/videos" },
+    { key: "nav_about", path: "/about" },
+    { key: "nav_buyers", path: "/buyers" },
+    { key: "nav_sellers", path: "/sellers" },
+    { key: "nav_investors", path: "/investors" },
+    { key: "nav_areas", path: "/communities" },
+    { key: "nav_listings", path: "/listings" },
+    { key: "nav_videos", path: "/videos" },
   ];
 
   return (
@@ -43,7 +45,7 @@ export function Navigation() {
       >
         <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
 
-          {/* Logo — inverted white when over hero, dark otherwise */}
+          {/* Logo */}
           <Link href="/" className="z-50 cursor-pointer shrink-0">
             <img
               src="/logo.png"
@@ -58,11 +60,11 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-9">
-            <ul className="flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-7">
+            <ul className="flex items-center gap-6">
               {navLinks.map((link, i) => (
                 <motion.li
-                  key={link.name}
+                  key={link.key}
                   initial={{ opacity: 0, y: -6 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 + i * 0.04, ease: "easeOut" }}
@@ -77,7 +79,7 @@ export function Navigation() {
                         ? "text-foreground"
                         : "text-foreground/50 hover:text-foreground"
                     }`}>
-                      {link.name}
+                      {t(link.key)}
                       <span className={`absolute -bottom-1 left-0 h-px transition-all duration-300 ${
                         transparent ? "bg-white/80" : "bg-primary"
                       } ${
@@ -88,6 +90,40 @@ export function Navigation() {
                 </motion.li>
               ))}
             </ul>
+
+            {/* Language switcher */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.45 }}
+              className={`flex items-center gap-1 text-[10px] tracking-[0.14em] font-medium border rounded-none px-2 py-1 transition-all duration-500 ${
+                transparent
+                  ? "border-white/30 text-white/70"
+                  : "border-foreground/20 text-foreground/55"
+              }`}
+            >
+              <button
+                onClick={() => setLang("en")}
+                className={`px-1.5 py-0.5 transition-all duration-300 ${
+                  lang === "en"
+                    ? transparent ? "text-white" : "text-foreground"
+                    : transparent ? "text-white/40 hover:text-white/70" : "text-foreground/30 hover:text-foreground/60"
+                }`}
+              >
+                EN
+              </button>
+              <span className={transparent ? "text-white/20" : "text-foreground/20"}>|</span>
+              <button
+                onClick={() => setLang("zh")}
+                className={`px-1.5 py-0.5 transition-all duration-300 ${
+                  lang === "zh"
+                    ? transparent ? "text-white" : "text-foreground"
+                    : transparent ? "text-white/40 hover:text-white/70" : "text-foreground/30 hover:text-foreground/60"
+                }`}
+              >
+                中文
+              </button>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -100,7 +136,7 @@ export function Navigation() {
                     ? "border border-white/50 text-white/80 hover:bg-white hover:text-foreground hover:border-white"
                     : "border border-foreground/60 text-foreground/75 hover:bg-foreground hover:text-white hover:border-foreground"
                 }`}>
-                  Book Consultation
+                  {t("nav_book")}
                 </span>
               </Link>
             </motion.div>
@@ -130,10 +166,27 @@ export function Navigation() {
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-40 bg-[#f0edf8] pt-28 px-8 pb-12 flex flex-col overflow-y-auto lg:hidden"
           >
-            <nav className="flex flex-col space-y-1 mt-4 border-t border-foreground/10">
-              {[{ name: "Home", path: "/" }, ...navLinks, { name: "Contact", path: "/contact" }].map((link, i) => (
+            {/* Mobile language switcher */}
+            <div className="flex items-center gap-3 mb-8 text-sm tracking-[0.14em] font-medium">
+              <button
+                onClick={() => setLang("en")}
+                className={`transition-colors ${lang === "en" ? "text-foreground" : "text-foreground/35"}`}
+              >
+                EN — English
+              </button>
+              <span className="text-foreground/20">|</span>
+              <button
+                onClick={() => setLang("zh")}
+                className={`transition-colors ${lang === "zh" ? "text-foreground" : "text-foreground/35"}`}
+              >
+                中文 — Chinese
+              </button>
+            </div>
+
+            <nav className="flex flex-col space-y-1 border-t border-foreground/10">
+              {[{ key: "nav_about", path: "/about" }, ...navLinks.slice(1), { key: "nav_book", path: "/contact" }].map((link, i) => (
                 <motion.div
-                  key={link.name}
+                  key={link.key}
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.05 + i * 0.045 }}
@@ -143,7 +196,7 @@ export function Navigation() {
                     <span className={`text-3xl font-serif font-light tracking-tight block ${
                       location === link.path ? "text-foreground" : "text-foreground/60"
                     }`}>
-                      {link.name}
+                      {t(link.key)}
                     </span>
                   </Link>
                 </motion.div>

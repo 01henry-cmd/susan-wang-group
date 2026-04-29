@@ -1,12 +1,15 @@
 import { Link } from "wouter";
-import { Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-foreground text-white py-20 md:py-32">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 mb-24">
-          
+
           <div className="col-span-1 md:col-span-2 lg:col-span-4">
             <div className="flex items-center gap-6 mb-8">
               <Link href="/" className="cursor-pointer shrink-0">
@@ -28,13 +31,13 @@ export function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-base font-light leading-relaxed mb-10 max-w-sm">
-              Helping clients buy, sell & invest with strategy and clarity in Orange County and Los Angeles.
+              {t("footer_tagline")}
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-white/50 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
                 <Instagram strokeWidth={1.5} className="w-6 h-6" />
               </a>
-              <a href="#" className="text-white/50 hover:text-white transition-colors">
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
                 <Youtube strokeWidth={1.5} className="w-6 h-6" />
               </a>
               {/* WeChat QR */}
@@ -45,7 +48,6 @@ export function Footer() {
                     <path d="M21.6 22l-1.9-1.1c-1 .4-2.1.6-3.2.6-3.5 0-6.3-2.3-6.3-5.2S13 11 16.5 11s6.3 2.3 6.3 5.2c0 1.5-.7 2.8-1.9 3.8L21.6 22zm-5.2-7.8c-.4 0-.8.3-.8.8s.4.8.8.8.8-.3.8-.8-.3-.8-.8-.8zm3.2 0c-.4 0-.8.3-.8.8s.4.8.8.8.8-.3.8-.8-.3-.8-.8-.8z"/>
                   </svg>
                 </button>
-                {/* QR popup on hover */}
                 <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 hidden group-hover:flex flex-col items-center z-50">
                   <div className="bg-white shadow-2xl p-3 border border-border">
                     <img src="/wechat-qr.jpg" alt="Scan to add on WeChat" className="w-36 h-36 object-contain" />
@@ -58,32 +60,32 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-2 lg:col-start-6">
-            <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-white/40 mb-8">Explore</h4>
+            <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-white/40 mb-8">{t("footer_explore")}</h4>
             <ul className="space-y-4 text-sm font-light text-white/70">
-              <li><Link href="/about" className="hover:text-white transition-colors">About Susan</Link></li>
-              <li><Link href="/buyers" className="hover:text-white transition-colors">Buyers</Link></li>
-              <li><Link href="/sellers" className="hover:text-white transition-colors">Sellers</Link></li>
-              <li><Link href="/investors" className="hover:text-white transition-colors">Investors</Link></li>
-              <li><Link href="/communities" className="hover:text-white transition-colors">Communities</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">{t("footer_about")}</Link></li>
+              <li><Link href="/buyers" className="hover:text-white transition-colors">{t("footer_buyers")}</Link></li>
+              <li><Link href="/sellers" className="hover:text-white transition-colors">{t("footer_sellers")}</Link></li>
+              <li><Link href="/investors" className="hover:text-white transition-colors">{t("footer_investors")}</Link></li>
+              <li><Link href="/communities" className="hover:text-white transition-colors">{t("footer_communities")}</Link></li>
             </ul>
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-white/40 mb-8">Properties</h4>
+            <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-white/40 mb-8">{t("footer_properties")}</h4>
             <ul className="space-y-4 text-sm font-light text-white/70">
-              <li><Link href="/listings" className="hover:text-white transition-colors">Featured Listings</Link></li>
-              <li><Link href="/videos" className="hover:text-white transition-colors">Property Tours</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Book Consultation</Link></li>
+              <li><Link href="/listings" className="hover:text-white transition-colors">{t("footer_listings")}</Link></li>
+              <li><Link href="/videos" className="hover:text-white transition-colors">{t("footer_tours")}</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">{t("footer_book")}</Link></li>
             </ul>
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-white/40 mb-8">Contact</h4>
+            <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-white/40 mb-8">{t("footer_contact")}</h4>
             <ul className="space-y-6 text-sm font-light text-white/70">
-              <li className="flex items-start">
+              <li>
                 <a href="tel:+17148182511" className="hover:text-white transition-colors text-lg">(714) 818-2511</a>
               </li>
-              <li className="flex items-start">
+              <li>
                 <a href="mailto:Susan.wang@cbrealty.com" className="hover:text-white transition-colors text-lg">Susan.wang@cbrealty.com</a>
               </li>
               <li className="flex items-start pt-4 border-t border-white/10">
