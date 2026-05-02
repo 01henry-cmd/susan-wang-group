@@ -60,7 +60,7 @@ export default function BlogPage() {
                   {t("blog_h1")}
                 </h1>
               </div>
-              <p className="text-foreground/50 text-sm font-light max-w-xs leading-relaxed text-right hidden md:block">
+              <p className="text-foreground/70 text-sm font-light max-w-xs leading-relaxed text-right hidden md:block">
                 {t("blog_source_note")}
               </p>
             </motion.div>
@@ -102,13 +102,13 @@ export default function BlogPage() {
                     <div className="lg:col-span-5 flex flex-col justify-center p-10 lg:p-14">
                       <p className="text-[10px] tracking-[0.25em] uppercase font-medium text-primary mb-4">
                         {zh && featured.categoryZh ? featured.categoryZh : featured.category}
-                        <span className="text-foreground/30 mx-3">·</span>
-                        <span className="text-foreground/40">{featured.date}</span>
+                        <span className="text-foreground/50 mx-3">·</span>
+                        <span className="text-foreground/60">{featured.date}</span>
                       </p>
                       <h2 className="font-serif text-3xl lg:text-4xl font-light tracking-tight leading-snug mb-6">
                         {zh && featured.titleZh ? featured.titleZh : featured.title}
                       </h2>
-                      <p className="text-foreground/65 font-light leading-relaxed text-lg mb-10">
+                      <p className="text-foreground/80 font-light leading-relaxed text-lg mb-10">
                         {zh && featured.excerptZh ? featured.excerptZh : featured.excerpt}
                       </p>
                       <div className="flex items-center gap-3 text-xs tracking-[0.18em] uppercase font-medium text-foreground group-hover:text-primary transition-colors">
@@ -162,16 +162,16 @@ export default function BlogPage() {
                         </div>
                         <p className="text-[9px] tracking-[0.22em] uppercase font-medium text-primary mb-3">
                           {zh && post.categoryZh ? post.categoryZh : post.category}
-                          <span className="text-foreground/25 mx-2">·</span>
-                          <span className="text-foreground/35">{post.date}</span>
+                          <span className="text-foreground/45 mx-2">·</span>
+                          <span className="text-foreground/60">{post.date}</span>
                         </p>
                         <h3 className="font-serif text-xl lg:text-2xl font-light tracking-tight leading-snug mb-4 group-hover:text-primary/80 transition-colors duration-300">
                           {zh && post.titleZh ? post.titleZh : post.title}
                         </h3>
-                        <p className="text-foreground/60 font-light leading-relaxed text-sm flex-grow mb-6">
+                        <p className="text-foreground/75 font-light leading-relaxed text-sm flex-grow mb-6">
                           {zh && post.excerptZh ? post.excerptZh : post.excerpt}
                         </p>
-                        <div className="flex items-center gap-2 text-[10px] tracking-[0.16em] uppercase font-medium text-foreground/50 group-hover:text-primary transition-colors duration-300 mt-auto pt-4 border-t border-border">
+                        <div className="flex items-center gap-2 text-[10px] tracking-[0.16em] uppercase font-medium text-foreground/65 group-hover:text-primary transition-colors duration-300 mt-auto pt-4 border-t border-border">
                           <span>{t("blog_read")}</span>
                           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={1.5} />
                         </div>
@@ -181,7 +181,7 @@ export default function BlogPage() {
 
                   {/* Attribution */}
                   <div className="mt-20 pt-10 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                    <p className="text-xs text-foreground/40 font-light leading-relaxed max-w-lg">
+                    <p className="text-xs text-foreground/65 font-light leading-relaxed max-w-lg">
                       {t("blog_attribution")}
                     </p>
                     <a

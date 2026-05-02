@@ -99,7 +99,7 @@ export default function ContactPage() {
 
                 <div>
                   <h3 className="font-serif text-3xl mb-6 font-light tracking-tight leading-snug">{t("contact_intro")}</h3>
-                  <p className="text-foreground/70 leading-relaxed font-light text-lg">
+                  <p className="text-foreground/82 leading-relaxed font-light text-lg">
                     {t("contact_sub")}
                   </p>
                 </div>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                   <div className="flex items-start group">
                     <Instagram className="w-5 h-5 text-primary shrink-0 mr-6 mt-1" strokeWidth={1.5} />
                     <div>
-                      <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-foreground/50 mb-2">Instagram</h4>
+                      <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-foreground/65 mb-2">Instagram</h4>
                       <a href="#" className="text-lg font-light hover:text-primary transition-colors border-b border-transparent group-hover:border-primary pb-1">@susanwanggroup</a>
                     </div>
                   </div>
@@ -143,10 +143,10 @@ export default function ContactPage() {
                       <path d="M21.6 22l-1.9-1.1c-1 .4-2.1.6-3.2.6-3.5 0-6.3-2.3-6.3-5.2S13 11 16.5 11s6.3 2.3 6.3 5.2c0 1.5-.7 2.8-1.9 3.8L21.6 22zm-5.2-7.8c-.4 0-.8.3-.8.8s.4.8.8.8.8-.3.8-.8-.3-.8-.8-.8zm3.2 0c-.4 0-.8.3-.8.8s.4.8.8.8.8-.3.8-.8-.3-.8-.8-.8z"/>
                     </svg>
                     <div>
-                      <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-foreground/50 mb-3">{t("contact_wechat")}</h4>
+                      <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-foreground/65 mb-3">{t("contact_wechat")}</h4>
                       <div className="border border-border p-3 inline-block bg-white shadow-sm">
                         <img src="/wechat-qr.jpg" alt="WeChat QR Code" className="w-28 h-28 object-contain" />
-                        <p className="text-[9px] tracking-[0.18em] uppercase text-foreground/40 text-center mt-2">{t("contact_wechat_scan")}</p>
+                        <p className="text-[9px] tracking-[0.18em] uppercase text-foreground/60 text-center mt-2">{t("contact_wechat_scan")}</p>
                       </div>
                     </div>
                   </div>
@@ -162,7 +162,7 @@ export default function ContactPage() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-foreground/50">{t("contact_name")}</FormLabel>
+                          <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-foreground/65">{t("contact_name")}</FormLabel>
                           <FormControl>
                             <Input placeholder="Jane Doe" className="rounded-none border-t-0 border-x-0 border-b border-border bg-transparent px-0 pb-4 text-lg font-light focus-visible:ring-0 focus-visible:border-foreground transition-colors" {...field} />
                           </FormControl>
@@ -177,7 +177,7 @@ export default function ContactPage() {
                         name="email"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-foreground/50">{t("contact_email")}</FormLabel>
+                            <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-foreground/65">{t("contact_email")}</FormLabel>
                             <FormControl>
                               <Input placeholder="jane@example.com" className="rounded-none border-t-0 border-x-0 border-b border-border bg-transparent px-0 pb-4 text-lg font-light focus-visible:ring-0 focus-visible:border-foreground transition-colors" {...field} />
                             </FormControl>
@@ -190,7 +190,7 @@ export default function ContactPage() {
                         name="phone"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-foreground/50">{t("contact_phone")}</FormLabel>
+                            <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-foreground/65">{t("contact_phone")}</FormLabel>
                             <FormControl>
                               <Input placeholder="(714) 818-2511" className="rounded-none border-t-0 border-x-0 border-b border-border bg-transparent px-0 pb-4 text-lg font-light focus-visible:ring-0 focus-visible:border-foreground transition-colors" {...field} />
                             </FormControl>
@@ -205,7 +205,7 @@ export default function ContactPage() {
                       name="intent"
                       render={({ field }) => (
                         <FormItem className="space-y-6 pt-4">
-                          <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-foreground/50">{t("contact_intent")}</FormLabel>
+                          <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-foreground/65">{t("contact_intent")}</FormLabel>
                           <FormControl>
                             <RadioGroup
                               onValueChange={field.onChange}
@@ -248,7 +248,7 @@ export default function ContactPage() {
                       name="message"
                       render={({ field }) => (
                         <FormItem className="pt-4">
-                          <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-foreground/50">{t("contact_message")}</FormLabel>
+                          <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-foreground/65">{t("contact_message")}</FormLabel>
                           <FormControl>
                             <Textarea 
                               placeholder={t("contact_message_placeholder")}

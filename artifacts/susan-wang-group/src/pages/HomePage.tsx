@@ -170,7 +170,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.85, ease }}
-                className="text-base text-white/65 font-light leading-relaxed max-w-md mb-12"
+                className="text-base text-white/85 font-light leading-relaxed max-w-md mb-12"
               >
                 {t("hero_sub")}
               </motion.p>
@@ -182,7 +182,7 @@ export default function HomePage() {
                 className="flex flex-col sm:flex-row items-start gap-6"
               >
                 <CTAButton href="/contact">{t("hero_cta")}</CTAButton>
-                <Link href="/listings" className="group inline-flex items-center text-[11px] tracking-[0.2em] uppercase text-white/50 hover:text-white transition-colors duration-300 mt-4 sm:mt-3">
+                <Link href="/listings" className="group inline-flex items-center text-[11px] tracking-[0.2em] uppercase text-white/75 hover:text-white transition-colors duration-300 mt-4 sm:mt-3">
                   <span className="border-b border-white/20 pb-0.5 group-hover:border-white/55 transition-colors">{t("hero_portfolio")}</span>
                 </Link>
               </motion.div>
@@ -322,7 +322,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.8, delay: 0.2, ease }}
-                  className="space-y-5 text-foreground/63 font-light leading-relaxed text-[1.03rem] mb-10"
+                  className="space-y-5 text-foreground/78 font-light leading-relaxed text-[1.03rem] mb-10"
                 >
                   <p>
                     Navigating the Southern California real estate market requires more than local knowledge — it demands strategic foresight, meticulous preparation, and unwavering advocacy. As an advisor affiliated with Coldwell Banker, I bring an analytical approach to every transaction.
@@ -372,7 +372,7 @@ export default function HomePage() {
                   {t("listings_title")}
                 </h2>
               </div>
-              <Link href="/listings" className="group text-[10px] tracking-[0.22em] uppercase text-foreground/45 hover:text-foreground transition-colors duration-300 flex items-center gap-2 shrink-0">
+              <Link href="/listings" className="group text-[10px] tracking-[0.22em] uppercase text-foreground/65 hover:text-foreground transition-colors duration-300 flex items-center gap-2 shrink-0">
                 <span className="border-b border-foreground/18 group-hover:border-foreground/50 pb-0.5 transition-colors">{t("listings_cta")}</span>
               </Link>
             </motion.div>
@@ -450,7 +450,7 @@ export default function HomePage() {
                       {s.title}
                     </h3>
                     <div className="w-full md:w-[55%] relative z-10">
-                      <p className="text-foreground/63 font-light leading-relaxed mb-6 text-[1.02rem]">{s.body}</p>
+                      <p className="text-foreground/78 font-light leading-relaxed mb-6 text-[1.02rem]">{s.body}</p>
                       <Link href={s.href} className="text-[10px] tracking-[0.22em] uppercase font-medium text-foreground/55 hover:text-foreground transition-colors border-b border-foreground/18 pb-0.5 hover:border-foreground/50">
                         {s.label}
                       </Link>

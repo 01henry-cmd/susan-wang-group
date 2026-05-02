@@ -59,7 +59,7 @@ export default function SellersPage() {
               >
                 <p className="text-primary text-xs tracking-[0.2em] uppercase font-medium mb-6">{t("sellers_std_eyebrow")}</p>
                 <h2 className="font-serif text-4xl md:text-5xl mb-8 font-light tracking-tight leading-tight">{t("sellers_std_h2")}</h2>
-                <p className="text-foreground/70 mb-12 font-light text-lg leading-relaxed">
+                <p className="text-foreground/82 mb-12 font-light text-lg leading-relaxed">
                   {t("sellers_std_body")}
                 </p>
                 
@@ -70,7 +70,7 @@ export default function SellersPage() {
                     </div>
                     <div>
                       <h4 className="font-serif text-2xl mb-2 font-light">{t("sellers_visual_title")}</h4>
-                      <p className="text-foreground/70 font-light leading-relaxed">{t("sellers_visual_body")}</p>
+                      <p className="text-foreground/82 font-light leading-relaxed">{t("sellers_visual_body")}</p>
                     </div>
                   </div>
                   
@@ -80,7 +80,7 @@ export default function SellersPage() {
                     </div>
                     <div>
                       <h4 className="font-serif text-2xl mb-2 font-light">{t("sellers_reach_title")}</h4>
-                      <p className="text-foreground/70 font-light leading-relaxed">{t("sellers_reach_body")}</p>
+                      <p className="text-foreground/82 font-light leading-relaxed">{t("sellers_reach_body")}</p>
                     </div>
                   </div>
                   
@@ -90,7 +90,7 @@ export default function SellersPage() {
                     </div>
                     <div>
                       <h4 className="font-serif text-2xl mb-2 font-light">{t("sellers_staging_title")}</h4>
-                      <p className="text-foreground/70 font-light leading-relaxed">{t("sellers_staging_body")}</p>
+                      <p className="text-foreground/82 font-light leading-relaxed">{t("sellers_staging_body")}</p>
                     </div>
                   </div>
                 </div>
@@ -111,14 +111,14 @@ export default function SellersPage() {
         <section className="py-32 bg-[#1a1a1a] text-white text-center">
           <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="font-serif text-4xl md:text-5xl font-light tracking-tight mb-8">{t("sellers_price_h2")}</h2>
-            <p className="text-xl text-white/70 font-light leading-relaxed mb-16 max-w-3xl mx-auto">
+            <p className="text-xl text-white/85 font-light leading-relaxed mb-16 max-w-3xl mx-auto">
               {t("sellers_price_body")}
             </p>
             
             <div className="bg-white/5 border border-white/10 p-10 md:p-16 backdrop-blur-sm text-left">
               <LineChart className="w-10 h-10 text-primary mb-8" strokeWidth={1} />
               <h3 className="font-serif text-3xl mb-4 font-light">{t("sellers_val_h3")}</h3>
-              <p className="text-white/60 font-light mb-8 text-lg">
+              <p className="text-white/82 font-light mb-8 text-lg">
                 {t("sellers_val_body")}
               </p>
               <form className="flex flex-col sm:flex-row gap-4">
@@ -154,7 +154,7 @@ export default function SellersPage() {
                   <div className="font-serif text-5xl text-foreground/10 mb-4 font-light">{item.step}</div>
                   <div className="border-t border-border pt-6">
                     <h4 className="font-serif text-2xl mb-4 font-light">{item.title}</h4>
-                    <p className="text-foreground/70 font-light leading-relaxed text-lg">{item.desc}</p>
+                    <p className="text-foreground/82 font-light leading-relaxed text-lg">{item.desc}</p>
                   </div>
                 </div>
               ))}

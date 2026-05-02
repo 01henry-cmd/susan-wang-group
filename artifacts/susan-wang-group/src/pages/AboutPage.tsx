@@ -88,7 +88,7 @@ export default function AboutPage() {
                   <h3 className="font-serif text-4xl md:text-5xl leading-tight font-light mb-8">
                     "{t("about_quote")}"
                   </h3>
-                  <div className="flex items-center gap-4 text-xs tracking-widest uppercase text-foreground/50 pt-8 border-t border-border mb-16">
+                  <div className="flex items-center gap-4 text-xs tracking-widest uppercase text-foreground/65 pt-8 border-t border-border mb-16">
                     <span>DRE# 02132358</span>
                     <span className="w-1 h-1 rounded-full bg-foreground/20"></span>
                     <span>Coldwell Banker</span>
@@ -100,22 +100,22 @@ export default function AboutPage() {
                       <div className="flex flex-col">
                         <TrendingUp className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
                         <h5 className="font-serif text-xl mb-2">{t("about_pillar1_title")}</h5>
-                        <p className="text-sm text-foreground/70 font-light leading-relaxed">{t("about_pillar1_body")}</p>
+                        <p className="text-sm text-foreground/82 font-light leading-relaxed">{t("about_pillar1_body")}</p>
                       </div>
                       <div className="flex flex-col">
                         <Briefcase className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
                         <h5 className="font-serif text-xl mb-2">{t("about_pillar2_title")}</h5>
-                        <p className="text-sm text-foreground/70 font-light leading-relaxed">{t("about_pillar2_body")}</p>
+                        <p className="text-sm text-foreground/82 font-light leading-relaxed">{t("about_pillar2_body")}</p>
                       </div>
                       <div className="flex flex-col">
                         <Award className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
                         <h5 className="font-serif text-xl mb-2">{t("about_pillar3_title")}</h5>
-                        <p className="text-sm text-foreground/70 font-light leading-relaxed">{t("about_pillar3_body")}</p>
+                        <p className="text-sm text-foreground/82 font-light leading-relaxed">{t("about_pillar3_body")}</p>
                       </div>
                       <div className="flex flex-col">
                         <GraduationCap className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
                         <h5 className="font-serif text-xl mb-2">{t("about_pillar4_title")}</h5>
-                        <p className="text-sm text-foreground/70 font-light leading-relaxed">{t("about_pillar4_body")}</p>
+                        <p className="text-sm text-foreground/82 font-light leading-relaxed">{t("about_pillar4_body")}</p>
                       </div>
                     </div>
                   </div>
@@ -149,7 +149,7 @@ export default function AboutPage() {
         <section className="py-32 bg-[#ebe8e2] text-center">
           <div className="container mx-auto px-6">
             <h2 className="font-serif text-4xl md:text-5xl mb-8 font-light">{t("about_cta_h2")}</h2>
-            <p className="text-foreground/70 mb-10 max-w-md mx-auto font-light text-lg">
+            <p className="text-foreground/80 mb-10 max-w-md mx-auto font-light text-lg">
               {t("about_cta_sub")}
             </p>
             <CTAButton href="/contact">{t("about_cta_btn")}</CTAButton>

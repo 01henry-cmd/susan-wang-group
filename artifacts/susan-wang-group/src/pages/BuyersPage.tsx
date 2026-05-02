@@ -73,7 +73,7 @@ export default function BuyersPage() {
                 <p className="text-primary text-xs tracking-[0.2em] uppercase font-medium mb-4">{t("buyers_adv_eyebrow")}</p>
                 <h2 className="font-serif text-4xl md:text-5xl mb-10 font-light tracking-tight">{t("buyers_adv_h2")}</h2>
                 
-                <div className="space-y-6 text-foreground/70 font-light text-lg leading-relaxed mb-12">
+                <div className="space-y-6 text-foreground/82 font-light text-lg leading-relaxed mb-12">
                   <p>{t("buyers_adv_p1")}</p>
                   <p>{t("buyers_adv_p2")}</p>
                 </div>
@@ -88,7 +88,7 @@ export default function BuyersPage() {
                     ].map((item, i) => (
                       <li key={i} className="flex items-start">
                         <span className="font-serif text-primary italic mr-4 text-xl mt-[-2px]">0{i+1}.</span>
-                        <span className="text-foreground/80 font-light text-lg">{item}</span>
+                        <span className="text-foreground/85 font-light text-lg">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -119,7 +119,7 @@ export default function BuyersPage() {
                     <h4 className="font-serif text-2xl lg:text-3xl font-light">{step.title}</h4>
                     <span className="font-serif text-4xl text-foreground/10">0{i+1}</span>
                   </div>
-                  <p className="text-lg text-foreground/70 font-light leading-relaxed">{step.desc}</p>
+                  <p className="text-lg text-foreground/82 font-light leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
@@ -162,7 +162,7 @@ export default function BuyersPage() {
           <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
           <div className="container mx-auto px-6 relative z-10">
             <h2 className="font-serif text-4xl md:text-5xl mb-6 font-light tracking-tight">{t("buyers_cta_h2")}</h2>
-            <p className="text-white/70 mb-12 max-w-xl mx-auto font-light text-lg">
+            <p className="text-white/85 mb-12 max-w-xl mx-auto font-light text-lg">
               {t("buyers_cta_sub")}
             </p>
             <CTAButton href="/contact" className="bg-white text-foreground hover:bg-white/90">{t("buyers_cta_btn")}</CTAButton>
