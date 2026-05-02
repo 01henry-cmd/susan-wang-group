@@ -23,9 +23,8 @@ export function Navigation() {
     { key: "nav_about", path: "/about" },
     { key: "nav_buyers", path: "/buyers" },
     { key: "nav_sellers", path: "/sellers" },
-    { key: "nav_areas", path: "/communities" },
     { key: "nav_listings", path: "/listings" },
-    { key: "nav_videos", path: "/videos" },
+    { key: "nav_blog", path: "/blog" },
   ];
 
   return (

@@ -18,9 +18,8 @@ import HomePage from "@/pages/HomePage";
 import AboutPage from "@/pages/AboutPage";
 import BuyersPage from "@/pages/BuyersPage";
 import SellersPage from "@/pages/SellersPage";
-import CommunitiesPage from "@/pages/CommunitiesPage";
 import ListingsPage from "@/pages/ListingsPage";
-import VideosPage from "@/pages/VideosPage";
+import BlogPage from "@/pages/BlogPage";
 import ContactPage from "@/pages/ContactPage";
 
 const queryClient = new QueryClient();
@@ -32,9 +31,8 @@ function Router() {
       <Route path="/about" component={AboutPage} />
       <Route path="/buyers" component={BuyersPage} />
       <Route path="/sellers" component={SellersPage} />
-      <Route path="/communities" component={CommunitiesPage} />
       <Route path="/listings" component={ListingsPage} />
-      <Route path="/videos" component={VideosPage} />
+      <Route path="/blog" component={BlogPage} />
       <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />
     </Switch>

@@ -65,7 +65,6 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-white transition-colors">{t("footer_about")}</Link></li>
               <li><Link href="/buyers" className="hover:text-white transition-colors">{t("footer_buyers")}</Link></li>
               <li><Link href="/sellers" className="hover:text-white transition-colors">{t("footer_sellers")}</Link></li>
-              <li><Link href="/communities" className="hover:text-white transition-colors">{t("footer_communities")}</Link></li>
             </ul>
           </div>
 
@@ -73,7 +72,7 @@ export function Footer() {
             <h4 className="font-medium text-[10px] tracking-[0.2em] uppercase text-white/40 mb-8">{t("footer_properties")}</h4>
             <ul className="space-y-4 text-sm font-light text-white/70">
               <li><Link href="/listings" className="hover:text-white transition-colors">{t("footer_listings")}</Link></li>
-              <li><Link href="/videos" className="hover:text-white transition-colors">{t("footer_tours")}</Link></li>
+              <li><Link href="/blog" className="hover:text-white transition-colors">{t("footer_blog")}</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">{t("footer_book")}</Link></li>
             </ul>
           </div>

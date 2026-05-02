@@ -2,7 +2,6 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
 import { ListingCard } from "@/components/ListingCard";
-import { CommunityCard } from "@/components/CommunityCard";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { useRef, useState, useEffect } from "react";
@@ -49,32 +48,6 @@ const listings = [
   },
 ];
 
-const communities = [
-  {
-    name: "Newport Beach",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80",
-    description: "Coastal luxury, private docks, and world-class yachting along the stunning Pacific shoreline.",
-    href: "/communities#newport-beach",
-  },
-  {
-    name: "Irvine",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80",
-    description: "Master-planned perfection, top-tier schools, and modern estates.",
-    href: "/communities#irvine",
-  },
-  {
-    name: "Los Angeles",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
-    description: "Iconic architecture, cultural hubs, and unparalleled views from the hills to the coast.",
-    href: "/communities#los-angeles",
-  },
-  {
-    name: "Huntington Beach",
-    image: "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=900&q=80",
-    description: "Relaxed coastal luxury where surf culture meets refined living.",
-    href: "/communities#huntington-beach",
-  },
-];
 
 
 const services = [
@@ -483,48 +456,6 @@ export default function HomePage() {
                       </Link>
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ─── COMMUNITIES ──────────────────────────────────────── */}
-        <section className="py-28 lg:py-36 bg-white">
-          <div className="container mx-auto px-6 lg:px-12">
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, ease }}
-              className="mb-14"
-            >
-              <p className="text-[10px] tracking-[0.25em] uppercase text-primary font-medium mb-5 flex items-center gap-3">
-                <motion.span
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.55, ease }}
-                  className="w-4 h-px bg-primary origin-left inline-block"
-                />
-                {t("communities_eyebrow")}
-              </p>
-              <h2 className="font-serif font-light tracking-tight text-foreground"
-                style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
-                {t("communities_title")}
-              </h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {communities.map((c, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 24, clipPath: "inset(0 0 20% 0)" }}
-                  whileInView={{ opacity: 1, y: 0, clipPath: "inset(0 0 0% 0)" }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.8, delay: i * 0.1, ease }}
-                >
-                  <CommunityCard {...c} />
                 </motion.div>
               ))}
             </div>

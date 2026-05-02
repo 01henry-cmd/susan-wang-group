@@ -4,10 +4,8 @@ export const translations: Record<string, Record<string, string>> = {
     nav_about: "About",
     nav_buyers: "Buyers",
     nav_sellers: "Sellers",
-    nav_investors: "Investors",
-    nav_areas: "Areas",
     nav_listings: "Listings",
-    nav_videos: "Videos",
+    nav_blog: "Blog",
     nav_book: "Book Consultation",
 
     /* ── Home Hero ───────────────────────────────────────── */
@@ -53,6 +51,7 @@ export const translations: Record<string, Record<string, string>> = {
     footer_buyers: "Buyers",
     footer_sellers: "Sellers",
     footer_investors: "Investors",
+    footer_blog: "Editorial Blog",
     footer_communities: "Communities",
     footer_listings: "Featured Listings",
     footer_tours: "Property Tours",
@@ -227,6 +226,15 @@ export const translations: Record<string, Record<string, string>> = {
     contact_submit: "Submit Inquiry",
     contact_toast_title: "Inquiry Received",
     contact_toast_desc: "Thank you. Susan will be in touch shortly.",
+
+    /* ── Blog Page ───────────────────────────────────────── */
+    blog_eyebrow: "Luxury Editorial",
+    blog_h1: "Market Insights & Design.",
+    blog_source_note: "Curated from Coldwell Banker Luxury Editorial — global perspectives on luxury living.",
+    blog_read: "Read Article",
+    blog_latest: "Latest Stories",
+    blog_view_all: "View All at CB Luxury",
+    blog_attribution: "Articles curated from Coldwell Banker Luxury Editorial. All content is the property of Coldwell Banker Luxury. For the full editorial archive, visit coldwellbankerluxury.com/editorial.",
   },
 
   zh: {
@@ -234,10 +242,8 @@ export const translations: Record<string, Record<string, string>> = {
     nav_about: "关于我",
     nav_buyers: "买家",
     nav_sellers: "卖家",
-    nav_investors: "投资者",
-    nav_areas: "区域",
     nav_listings: "房源",
-    nav_videos: "视频",
+    nav_blog: "博客",
     nav_book: "预约咨询",
 
     /* ── Home Hero ───────────────────────────────────────── */
@@ -283,6 +289,7 @@ export const translations: Record<string, Record<string, string>> = {
     footer_buyers: "买家",
     footer_sellers: "卖家",
     footer_investors: "投资者",
+    footer_blog: "编辑博客",
     footer_communities: "社区",
     footer_listings: "精选房源",
     footer_tours: "房产视频",
@@ -457,5 +464,14 @@ export const translations: Record<string, Record<string, string>> = {
     contact_submit: "提交咨询",
     contact_toast_title: "咨询已收到",
     contact_toast_desc: "感谢您的联系，王苏珊将尽快与您联络。",
+
+    /* ── Blog Page ───────────────────────────────────────── */
+    blog_eyebrow: "豪华资讯",
+    blog_h1: "市场洞察与设计。",
+    blog_source_note: "精选自Coldwell Banker豪华房产编辑部——全球豪华生活视角。",
+    blog_read: "阅读全文",
+    blog_latest: "最新文章",
+    blog_view_all: "查看CB豪华全部内容",
+    blog_attribution: "文章精选自Coldwell Banker豪华房产编辑部。所有内容归Coldwell Banker Luxury所有。如需查阅完整编辑存档，请访问 coldwellbankerluxury.com/editorial。",
   },
 };
