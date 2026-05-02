@@ -4,72 +4,32 @@ import { ListingCard } from "@/components/ListingCard";
 import { Search, SlidersHorizontal } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useState, useEffect } from "react";
+import { Loader2 } from "lucide-react";
+
+interface Listing {
+  image: string;
+  price: string;
+  address: string;
+  city: string;
+  beds: number;
+  baths: number;
+  sqft: string;
+  status: string;
+  featured?: boolean;
+}
 
 export default function ListingsPage() {
   const { t } = useLanguage();
+  const [listings, setListings] = useState<Listing[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const listings = [
-    {
-      image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1000&q=80",
-      price: "$4,250,000",
-      address: "142 Oceanfront Ave",
-      city: "Newport Beach, CA",
-      beds: 4,
-      baths: 4.5,
-      sqft: "3,850",
-      status: "Active"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1000&q=80",
-      price: "$2,895,000",
-      address: "88 Orchard Hills Dr",
-      city: "Irvine, CA",
-      beds: 5,
-      baths: 5,
-      sqft: "4,200",
-      status: "Just Listed"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1000&q=80",
-      price: "$5,100,000",
-      address: "412 Beverly Estate",
-      city: "Los Angeles, CA",
-      beds: 6,
-      baths: 7,
-      sqft: "6,500",
-      status: "Active"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=1000&q=80",
-      price: "$1,850,000",
-      address: "24 Seaview Ln",
-      city: "Huntington Beach, CA",
-      beds: 3,
-      baths: 2.5,
-      sqft: "2,400",
-      status: "Under Contract"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&q=80",
-      price: "$8,950,000",
-      address: "7 Pelican Crest",
-      city: "Newport Coast, CA",
-      beds: 6,
-      baths: 8,
-      sqft: "9,200",
-      status: "Active"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=1000&q=80",
-      price: "$3,150,000",
-      address: "15 Shady Canyon",
-      city: "Irvine, CA",
-      beds: 4,
-      baths: 4.5,
-      sqft: "4,800",
-      status: "Sold"
-    }
-  ];
+  useEffect(() => {
+    fetch("/listings.json")
+      .then((r) => r.json())
+      .then((data) => { setListings(data); setLoading(false); })
+      .catch(() => setLoading(false));
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -132,20 +92,28 @@ export default function ListingsPage() {
               {t("listings_idx_note")}
             </div>
 
-            {/* Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20">
-              {listings.map((listing, i) => (
-                <div key={i} className={i % 3 === 1 ? "md:mt-12" : ""}>
-                  <ListingCard {...listing} />
+            {loading ? (
+              <div className="py-40 flex justify-center">
+                <Loader2 className="w-8 h-8 animate-spin text-primary/40" />
+              </div>
+            ) : (
+              <>
+                {/* Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20">
+                  {listings.map((listing, i) => (
+                    <div key={i} className={i % 3 === 1 ? "md:mt-12" : ""}>
+                      <ListingCard {...listing} />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            
-            <div className="mt-32 flex justify-center">
-              <button className="text-xs uppercase tracking-[0.2em] font-medium border border-foreground px-8 py-4 hover:bg-foreground hover:text-white transition-colors">
-                {t("listings_load_more")}
-              </button>
-            </div>
+                
+                <div className="mt-32 flex justify-center">
+                  <button className="text-xs uppercase tracking-[0.2em] font-medium border border-foreground px-8 py-4 hover:bg-foreground hover:text-white transition-colors">
+                    {t("listings_load_more")}
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         </section>
       </main>

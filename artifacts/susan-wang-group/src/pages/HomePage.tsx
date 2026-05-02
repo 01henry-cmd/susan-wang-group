@@ -14,39 +14,17 @@ const heroImages = [
   "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1400&q=85",
 ];
 
-const listings = [
-  {
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80",
-    price: "$4,250,000",
-    address: "142 Oceanfront Ave",
-    city: "Newport Beach, CA",
-    beds: 4,
-    baths: 4.5,
-    sqft: "3,850",
-    status: "Featured",
-    featured: true,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80",
-    price: "$2,895,000",
-    address: "88 Orchard Hills Dr",
-    city: "Irvine, CA",
-    beds: 5,
-    baths: 5,
-    sqft: "4,200",
-    status: "Just Listed",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
-    price: "$5,100,000",
-    address: "412 Beverly Estate Ln",
-    city: "Los Angeles, CA",
-    beds: 6,
-    baths: 7,
-    sqft: "6,500",
-    status: "Active",
-  },
-];
+interface Listing {
+  image: string;
+  price: string;
+  address: string;
+  city: string;
+  beds: number;
+  baths: number;
+  sqft: string;
+  status: string;
+  featured?: boolean;
+}
 
 
 
@@ -74,11 +52,19 @@ export default function HomePage() {
   const heroRef = useRef<HTMLElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const [heroIdx, setHeroIdx] = useState(0);
+  const [listings, setListings] = useState<Listing[]>([]);
   const heroLines = [t("hero_line1"), t("hero_line2"), t("hero_line3"), t("hero_line4")];
 
   useEffect(() => {
     const id = setInterval(() => setHeroIdx(i => (i + 1) % heroImages.length), 6000);
     return () => clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    fetch("/listings.json")
+      .then((r) => r.json())
+      .then((data: Listing[]) => setListings(data.filter((l) => l.featured).slice(0, 3)))
+      .catch(() => {});
   }, []);
 
   const { scrollYProgress: heroScroll } = useScroll({
