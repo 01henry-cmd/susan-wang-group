@@ -265,7 +265,7 @@ export default function HomePage() {
                   className="aspect-[3/4] bg-muted overflow-hidden relative"
                 >
                   <img
-                    src="/susan-wang.jpg"
+                    src="/susan-office-2.jpg"
                     alt="Susan Wang"
                     className="w-full h-full object-cover object-top"
                   />

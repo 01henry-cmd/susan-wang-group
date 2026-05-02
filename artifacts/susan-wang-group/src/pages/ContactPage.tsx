@@ -83,6 +83,20 @@ export default function ContactPage() {
               
               {/* Contact Info */}
               <div className="lg:col-span-5 space-y-12">
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.2 }}
+                  className="overflow-hidden"
+                >
+                  <img
+                    src="/susan-office-1.jpg"
+                    alt="Susan Wang"
+                    className="w-full object-cover object-top"
+                    style={{ maxHeight: "420px" }}
+                  />
+                </motion.div>
+
                 <div>
                   <h3 className="font-serif text-3xl mb-6 font-light tracking-tight leading-snug">{t("contact_intro")}</h3>
                   <p className="text-foreground/70 leading-relaxed font-light text-lg">
