@@ -62,7 +62,7 @@ export default function AboutPage() {
               className="relative max-w-3xl mx-auto"
             >
               <img
-                src="/susan-office-1.jpg"
+                src="/susan-wang.jpg"
                 alt="Susan Wang"
                 className="w-full object-cover object-top"
                 style={{ maxHeight: "75vh" }}
