@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -88,6 +88,22 @@ export function Navigation() {
                 </motion.li>
               ))}
             </ul>
+
+            {/* Phone number */}
+            <motion.a
+              href="tel:+17148182511"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.42 }}
+              className={`hidden xl:flex items-center gap-2 text-[11px] tracking-[0.12em] transition-colors duration-500 ${
+                transparent
+                  ? "text-white/70 hover:text-white"
+                  : "text-foreground/50 hover:text-foreground"
+              }`}
+            >
+              <Phone size={11} strokeWidth={1.5} />
+              (714) 818-2511
+            </motion.a>
 
             {/* Language switcher */}
             <motion.div
@@ -180,6 +196,14 @@ export function Navigation() {
                 中文 — Chinese
               </button>
             </div>
+
+            <a
+              href="tel:+17148182511"
+              className="flex items-center gap-3 mb-8 text-foreground/50 text-sm tracking-[0.12em]"
+            >
+              <Phone size={13} strokeWidth={1.5} />
+              (714) 818-2511
+            </a>
 
             <nav className="flex flex-col space-y-1 border-t border-foreground/10">
               {[{ key: "nav_about", path: "/about" }, ...navLinks.slice(1), { key: "nav_book", path: "/contact" }].map((link, i) => (
