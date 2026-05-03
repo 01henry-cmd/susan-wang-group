@@ -132,7 +132,7 @@ export default function BuyersPage() {
                 >
                   {/* Left: number + title */}
                   <div className="lg:col-span-4">
-                    <div className="font-serif text-[5rem] lg:text-[7rem] leading-none font-light text-foreground/[0.06] select-none mb-4 -ml-1">
+                    <div className="font-serif text-[5rem] lg:text-[7rem] leading-none font-light text-primary/25 select-none mb-4 -ml-1">
                       {step.num}
                     </div>
                     <h3 className="font-serif text-2xl lg:text-3xl font-light tracking-tight text-foreground">
