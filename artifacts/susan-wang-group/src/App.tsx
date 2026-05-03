@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useEffect } from "react";
 import NotFound from "@/pages/not-found";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { FloatingCTA } from "@/components/FloatingCTA";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -47,6 +48,7 @@ function App() {
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
             <ScrollToTop />
             <Router />
+            <FloatingCTA />
           </WouterRouter>
           <Toaster />
         </TooltipProvider>
