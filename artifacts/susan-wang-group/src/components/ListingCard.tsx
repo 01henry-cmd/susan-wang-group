@@ -22,7 +22,15 @@ export function ListingCard({ image, price, address, city, beds, baths, sqft, st
       className="group cursor-pointer"
     >
       <div className={`relative overflow-hidden mb-5 ${featured ? "aspect-[3/4]" : "aspect-[4/3]"}`}>
-        <span className="absolute top-4 left-4 z-10 text-[9px] tracking-[0.25em] uppercase text-white/90 border border-white/30 px-3 py-1 backdrop-blur-sm">
+        <span
+          className="absolute top-4 left-4 z-10 text-[9px] tracking-[0.25em] uppercase text-white font-medium px-3 py-1"
+          style={{
+            background:
+              status.toLowerCase().includes("sold") || status.toLowerCase().includes("just listed")
+                ? "#b6259f"
+                : "#1b9dbf",
+          }}
+        >
           {status}
         </span>
         <img

@@ -100,7 +100,7 @@ export default function BlogPage() {
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/10 pointer-events-none" />
                     </div>
                     <div className="lg:col-span-5 flex flex-col justify-center p-10 lg:p-14">
-                      <p className="text-[10px] tracking-[0.25em] uppercase font-medium text-primary mb-4">
+                      <p className="text-[10px] tracking-[0.25em] uppercase font-medium mb-4" style={{ color: "#1b9dbf" }}>
                         {zh && featured.categoryZh ? featured.categoryZh : featured.category}
                         <span className="text-foreground/50 mx-3">·</span>
                         <span className="text-foreground/60">{featured.date}</span>
@@ -160,7 +160,7 @@ export default function BlogPage() {
                             className="w-full h-56 object-cover transition-transform duration-[1s] group-hover:scale-105"
                           />
                         </div>
-                        <p className="text-[9px] tracking-[0.22em] uppercase font-medium text-primary mb-3">
+                        <p className="text-[9px] tracking-[0.22em] uppercase font-medium mb-3" style={{ color: "#1b9dbf" }}>
                           {zh && post.categoryZh ? post.categoryZh : post.category}
                           <span className="text-foreground/45 mx-2">·</span>
                           <span className="text-foreground/60">{post.date}</span>
