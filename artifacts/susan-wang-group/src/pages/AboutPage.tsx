@@ -2,7 +2,6 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { CTAButton } from "@/components/CTAButton";
 import { motion } from "framer-motion";
-import { Award, Briefcase, GraduationCap, TrendingUp } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AboutPage() {
@@ -94,31 +93,6 @@ export default function AboutPage() {
                     <span>Coldwell Banker</span>
                   </div>
 
-                  <div>
-                    <h4 className="font-serif text-2xl mb-8 font-light">{t("about_pillars_title")}</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                      <div className="flex flex-col">
-                        <TrendingUp className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                        <h5 className="font-serif text-xl mb-2">{t("about_pillar1_title")}</h5>
-                        <p className="text-sm text-foreground/82 font-light leading-relaxed">{t("about_pillar1_body")}</p>
-                      </div>
-                      <div className="flex flex-col">
-                        <Briefcase className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                        <h5 className="font-serif text-xl mb-2">{t("about_pillar2_title")}</h5>
-                        <p className="text-sm text-foreground/82 font-light leading-relaxed">{t("about_pillar2_body")}</p>
-                      </div>
-                      <div className="flex flex-col">
-                        <Award className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                        <h5 className="font-serif text-xl mb-2">{t("about_pillar3_title")}</h5>
-                        <p className="text-sm text-foreground/82 font-light leading-relaxed">{t("about_pillar3_body")}</p>
-                      </div>
-                      <div className="flex flex-col">
-                        <GraduationCap className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} />
-                        <h5 className="font-serif text-xl mb-2">{t("about_pillar4_title")}</h5>
-                        <p className="text-sm text-foreground/82 font-light leading-relaxed">{t("about_pillar4_body")}</p>
-                      </div>
-                    </div>
-                  </div>
                 </motion.div>
               </div>
 

@@ -26,7 +26,7 @@ export function FloatingCTA() {
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
               transition={{ duration: 0.2 }}
-              className="group flex items-center gap-4 text-white shadow-xl shadow-black/20 px-6 py-3.5 cursor-pointer border border-white/15 transition-opacity duration-300 hover:opacity-90 rounded-full"
+              className="group flex items-center gap-4 text-white shadow-xl shadow-black/20 px-6 py-3.5 cursor-pointer transition-opacity duration-300 hover:opacity-90 rounded-full"
               style={{ background: "linear-gradient(120deg, #b6259f 0%, #8a30af 45%, #1b9dbf 100%)" }}
             >
               {/* Pulse dot */}

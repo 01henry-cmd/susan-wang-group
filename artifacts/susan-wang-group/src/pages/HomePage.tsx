@@ -219,13 +219,13 @@ export default function HomePage() {
           className="bg-white border-y border-border py-7"
         >
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-[10px] tracking-[0.22em] uppercase text-foreground/60">
-              <span>Affiliated With</span>
-              <span className="font-serif text-sm tracking-wider text-foreground/80 normal-case">Coldwell Banker Global Luxury</span>
-              <span className="hidden sm:block w-px h-4 bg-border" />
-              <span>DRE# 02132358</span>
-              <span className="hidden sm:block w-px h-4 bg-border" />
-              <span>Orange County · Los Angeles</span>
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-y-2 sm:gap-y-3 gap-x-6 sm:gap-x-10 text-[10px] tracking-[0.18em] sm:tracking-[0.22em] uppercase text-foreground/60 text-center">
+              <span className="whitespace-nowrap">Affiliated With</span>
+              <span className="font-serif text-sm tracking-wide sm:tracking-wider text-foreground/80 normal-case whitespace-nowrap">Coldwell Banker Global Luxury</span>
+              <span className="hidden sm:block w-px h-4 bg-border shrink-0" />
+              <span className="whitespace-nowrap">DRE# 02132358</span>
+              <span className="hidden sm:block w-px h-4 bg-border shrink-0" />
+              <span className="whitespace-nowrap">Orange County · Los Angeles</span>
             </div>
           </div>
         </motion.section>
@@ -333,7 +333,7 @@ export default function HomePage() {
         </section>
 
         {/* ─── FEATURED LISTINGS ────────────────────────────────── */}
-        <section className="py-28 lg:py-36 bg-white">
+        <section className="py-28 lg:py-36 bg-dots">
           <div className="container mx-auto px-6 lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
@@ -423,15 +423,6 @@ export default function HomePage() {
                   className="group border-t border-foreground/10 last:border-b last:border-foreground/10"
                 >
                   <div className="relative overflow-hidden flex flex-col md:flex-row md:items-center justify-between py-10 md:py-12 px-0 md:px-4 gap-6 hover:bg-white/40 transition-colors duration-600">
-                    <motion.span
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: i * 0.09 + 0.2, ease }}
-                      className="absolute right-0 top-1/2 -translate-y-1/2 font-serif text-[9rem] leading-none text-foreground/[0.04] pointer-events-none select-none"
-                    >
-                      {s.num}
-                    </motion.span>
                     <h3 className="font-serif font-light text-3xl md:text-4xl tracking-tight relative z-10 w-full md:w-[35%] shrink-0">
                       {s.title}
                     </h3>
@@ -450,20 +441,6 @@ export default function HomePage() {
 
         {/* ─── FINAL CTA ────────────────────────────────────────── */}
         <section ref={ctaRef} className="relative py-36 lg:py-48 bg-[#f7f5fb] flex items-center justify-center overflow-hidden">
-
-          {/* Slow drifting watermark */}
-          <motion.div
-            animate={{ x: ["0%", "3%", "0%", "-3%", "0%"], rotate: [-6, -5.5, -6.5, -6, -6] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden"
-          >
-            <span
-              className="font-serif italic text-foreground/[0.028] whitespace-nowrap select-none"
-              style={{ fontSize: "clamp(4rem, 12vw, 10rem)" }}
-            >
-              Strategy. Clarity. Results.
-            </span>
-          </motion.div>
 
           <div className="container mx-auto px-6 lg:px-12 text-center relative z-10 max-w-3xl">
             <motion.p
