@@ -86,8 +86,8 @@ export default function BuyersPage() {
               transition={{ duration: 1, ease }}
               className="max-w-3xl"
             >
-              <p className="text-primary text-xs tracking-[0.3em] uppercase font-medium mb-6 flex items-center">
-                <span className="w-6 h-[1px] bg-primary mr-3" />
+              <p className="text-white/80 text-xs tracking-[0.3em] uppercase font-medium mb-6 flex items-center">
+                <span className="w-6 h-[1px] bg-white/60 mr-3" />
                 {t("buyers_guide_eyebrow")}
               </p>
               <h1 className="font-serif text-5xl md:text-7xl font-light tracking-tight leading-[1.05] mb-10">
@@ -108,7 +108,7 @@ export default function BuyersPage() {
           <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
             <div className="flex flex-wrap gap-x-8 gap-y-2">
               {steps.map((s) => (
-                <div key={s.num} className="flex items-center gap-2 text-[10px] tracking-[0.18em] uppercase text-foreground/60">
+                <div key={s.num} className="flex items-center gap-2 text-[10px] tracking-[0.18em] uppercase text-foreground/75">
                   <span className="text-primary font-medium">{s.num}</span>
                   <span>{isZh ? s.zh_title : s.en_title}</span>
                 </div>

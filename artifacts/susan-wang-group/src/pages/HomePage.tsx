@@ -219,9 +219,9 @@ export default function HomePage() {
           className="bg-white border-y border-border py-7"
         >
           <div className="container mx-auto px-6 lg:px-12">
-            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-[10px] tracking-[0.22em] uppercase text-foreground/45">
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-[10px] tracking-[0.22em] uppercase text-foreground/60">
               <span>Affiliated With</span>
-              <span className="font-serif text-sm tracking-wider text-foreground/65 normal-case">Coldwell Banker Global Luxury</span>
+              <span className="font-serif text-sm tracking-wider text-foreground/80 normal-case">Coldwell Banker Global Luxury</span>
               <span className="hidden sm:block w-px h-4 bg-border" />
               <span>DRE# 02132358</span>
               <span className="hidden sm:block w-px h-4 bg-border" />
@@ -266,10 +266,10 @@ export default function HomePage() {
                   transition={{ duration: 0.8, delay: 0.5, ease }}
                   className="absolute -bottom-6 -right-4 lg:-right-8 bg-white shadow-xl border border-border/40 p-7 max-w-[260px]"
                 >
-                  <p className="font-serif text-[1.05rem] italic leading-snug text-foreground/85 mb-3">
+                  <p className="font-serif text-[1.05rem] italic leading-snug text-foreground/90 mb-3">
                     "Every property tells a story. My job is to ensure it reaches the right audience."
                   </p>
-                  <p className="text-[9px] tracking-[0.22em] uppercase text-foreground/40">— Susan Wang</p>
+                  <p className="text-[9px] tracking-[0.22em] uppercase text-foreground/60">— Susan Wang</p>
                 </motion.div>
               </motion.div>
 
@@ -437,7 +437,7 @@ export default function HomePage() {
                     </h3>
                     <div className="w-full md:w-[55%] relative z-10">
                       <p className="text-foreground/78 font-light leading-relaxed mb-6 text-[1.02rem]">{s.body}</p>
-                      <Link href={s.href} className="text-[10px] tracking-[0.22em] uppercase font-medium text-foreground/55 hover:text-foreground transition-colors border-b border-foreground/18 pb-0.5 hover:border-foreground/50">
+                      <Link href={s.href} className="text-[10px] tracking-[0.22em] uppercase font-medium text-foreground/70 hover:text-foreground transition-colors border-b border-foreground/25 pb-0.5 hover:border-foreground/60">
                         {s.label}
                       </Link>
                     </div>
@@ -506,7 +506,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.2, ease }}
-              className="text-foreground/52 font-light leading-relaxed mb-12 max-w-xl mx-auto"
+              className="text-foreground/70 font-light leading-relaxed mb-12 max-w-xl mx-auto"
             >
               {t("cta_sub")}
             </motion.p>

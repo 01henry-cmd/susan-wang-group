@@ -38,9 +38,9 @@ export function ListingCard({ image, price, address, city, beds, baths, sqft, st
         <p className="font-serif text-2xl font-light tracking-tight text-foreground">{price}</p>
         <div>
           <p className="text-foreground/80 font-light">{address}</p>
-          <p className="text-[11px] tracking-[0.18em] uppercase text-foreground/45 mt-1">{city}</p>
+          <p className="text-[11px] tracking-[0.18em] uppercase text-foreground/60 mt-1">{city}</p>
         </div>
-        <div className="flex items-center gap-0 pt-4 border-t border-border text-[11px] tracking-[0.15em] uppercase text-foreground/50">
+        <div className="flex items-center gap-0 pt-4 border-t border-border text-[11px] tracking-[0.15em] uppercase text-foreground/65">
           <span>{beds} Bed</span>
           <span className="mx-3 text-border">|</span>
           <span>{baths} Bath</span>
