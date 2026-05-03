@@ -52,7 +52,8 @@ const steps = [
 ];
 
 export default function SellersPage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const isZh = lang === "zh";
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -86,13 +87,9 @@ export default function SellersPage() {
                 {t("sellers_guide_h1")}
               </h1>
 
-              {/* Intro — bilingual always shown */}
-              <div className="border-l-2 border-white/20 pl-6 space-y-4 max-w-2xl">
+              <div className="border-l-2 border-white/20 pl-6 max-w-2xl">
                 <p className="text-white/90 font-light text-lg leading-relaxed">
-                  {t("sellers_guide_intro_en")}
-                </p>
-                <p className="text-white/55 font-light text-sm leading-relaxed">
-                  {t("sellers_guide_intro_zh")}
+                  {t("sellers_guide_intro")}
                 </p>
               </div>
             </motion.div>
@@ -106,7 +103,7 @@ export default function SellersPage() {
               {steps.map((s) => (
                 <div key={s.num} className="flex items-center gap-2 text-[10px] tracking-[0.18em] uppercase text-foreground/60">
                   <span className="text-primary font-medium">{s.num}</span>
-                  <span>{s.en_title}</span>
+                  <span>{isZh ? s.zh_title : s.en_title}</span>
                 </div>
               ))}
             </div>
@@ -117,7 +114,7 @@ export default function SellersPage() {
         <section className="bg-white py-24 lg:py-32">
           <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
             <div className="divide-y divide-border">
-              {steps.map((step, i) => (
+              {steps.map((step) => (
                 <motion.div
                   key={step.num}
                   initial={{ opacity: 0, y: 20 }}
@@ -126,26 +123,20 @@ export default function SellersPage() {
                   transition={{ duration: 0.75, delay: 0.05, ease }}
                   className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 py-16 lg:py-20"
                 >
-                  {/* Left: number + titles */}
+                  {/* Left: number + title */}
                   <div className="lg:col-span-4">
                     <div className="font-serif text-[5rem] lg:text-[7rem] leading-none font-light text-foreground/[0.06] select-none mb-4 -ml-1">
                       {step.num}
                     </div>
-                    <h3 className="font-serif text-2xl lg:text-3xl font-light tracking-tight text-foreground mb-2">
-                      {step.en_title}
+                    <h3 className="font-serif text-2xl lg:text-3xl font-light tracking-tight text-foreground">
+                      {isZh ? step.zh_title : step.en_title}
                     </h3>
-                    <p className="text-primary text-sm font-medium tracking-wide">
-                      {step.zh_title}
-                    </p>
                   </div>
 
-                  {/* Right: body text bilingual */}
+                  {/* Right: body text */}
                   <div className="lg:col-span-8 lg:pt-6">
-                    <p className="text-foreground/80 font-light text-lg leading-relaxed mb-6">
-                      {step.en_body}
-                    </p>
-                    <p className="text-foreground/45 font-light text-sm leading-relaxed">
-                      {step.zh_body}
+                    <p className="text-foreground/80 font-light text-lg leading-relaxed">
+                      {isZh ? step.zh_body : step.en_body}
                     </p>
                   </div>
                 </motion.div>
@@ -172,14 +163,9 @@ export default function SellersPage() {
                 {t("sellers_guide_conclusion_h2")}
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-                <p className="text-white/75 font-light text-lg leading-relaxed">
-                  {t("sellers_guide_conclusion_en")}
-                </p>
-                <p className="text-white/40 font-light text-sm leading-relaxed">
-                  {t("sellers_guide_conclusion_zh")}
-                </p>
-              </div>
+              <p className="text-white/75 font-light text-lg leading-relaxed mb-16 max-w-3xl">
+                {t("sellers_guide_conclusion")}
+              </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
